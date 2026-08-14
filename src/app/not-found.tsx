@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Page not found',
+  title: 'Page Not Found',
   robots: { index: false, follow: false },
 };
 
@@ -10,7 +10,7 @@ export default function NotFound() {
   return (
     <main id="main" className="mx-auto max-w-[760px] px-4 py-20 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-semibold tracking-tight text-deep-navy">
-        Page not found
+        Page Not Found
       </h1>
       <p className="mt-4 text-base leading-7 text-muted">
         That URL is not part of the LifestyleIQ site.

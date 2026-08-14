@@ -16,29 +16,29 @@ export const site = {
 
 export const features = [
   {
-    title: 'Daily habit logging',
+    title: 'Daily Habit Logging',
     body: 'Log meals, sleep, activity, vitals, symptoms, and bowel movements in a few taps—so the picture of your day stays complete without becoming a chore.',
   },
   {
-    title: 'Medication and supplement schedule',
+    title: 'Medication and Supplement Schedule',
     body: 'Keep names, dosages, and typical times in one reusable schedule. Optional reminders help you stay consistent without logging every dose by hand.',
   },
   {
-    title: 'Pattern insights',
+    title: 'Pattern Insights',
     id: 'insights',
     ai: true,
     body: 'LifestyleIQ looks across your diary to surface correlations and practical next steps. Insights are informational only. They do not diagnose, treat, or replace professional care.',
   },
   {
-    title: 'Track what matters to you',
+    title: 'Track What Matters to You',
     body: 'Choose the areas you want help logging—then add conditions, goals, and ongoing symptoms so later entries and assessments stay relevant to your life.',
   },
   {
-    title: 'On-device diary',
+    title: 'On-Device Diary',
     body: 'Entries stay on your device today. Future cloud features will require explicit consent. Your health log is yours to keep.',
   },
   {
-    title: 'A timeline you can review',
+    title: 'A Timeline You Can Review',
     body: 'See today at a glance, scan a 14-day snapshot, and filter the full timeline when you want to look back before a visit or a change in routine.',
   },
 ] as const;

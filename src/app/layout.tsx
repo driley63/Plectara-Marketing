@@ -15,7 +15,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(site.url),
   title: {
-    default: `${site.name} — Personal health intelligence`,
+    default: `${site.name} — Personal Health Intelligence`,
     template: `%s · ${site.name}`,
   },
   description: site.description,
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: site.url,
     siteName: site.name,
-    title: `${site.name} — Personal health intelligence`,
+    title: `${site.name} — Personal Health Intelligence`,
     description: site.description,
     images: [
       {
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary',
-    title: `${site.name} — Personal health intelligence`,
+    title: `${site.name} — Personal Health Intelligence`,
     description: site.description,
     images: ['/brand/lifestyleiq_app_icon_1024.png'],
   },

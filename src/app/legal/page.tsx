@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Legal disclaimers',
+  title: 'Legal Disclaimers',
   description:
     'LifestyleIQ legal disclaimers: not medical advice, not a diagnostic product, and not a substitute for professional care.',
   alternates: { canonical: '/legal' },
@@ -17,14 +17,14 @@ export default function LegalPage() {
         </Link>
       </p>
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
-        Legal disclaimers
+        Legal Disclaimers
       </h1>
       <p className="mt-4 text-sm text-muted">Last updated: August 14, 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Not medical advice
+            Not Medical Advice
           </h2>
           <p className="mt-3">
             LifestyleIQ is a personal health diary with optional pattern
@@ -37,7 +37,7 @@ export default function LegalPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Not a diagnostic product
+            Not a Diagnostic Product
           </h2>
           <p className="mt-3">
             LifestyleIQ does not diagnose, treat, cure, or prevent any disease
@@ -49,7 +49,7 @@ export default function LegalPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Seek care when needed
+            Seek Care When Needed
           </h2>
           <p className="mt-3">
             Urgent, severe, or worsening symptoms deserve professional medical
@@ -61,7 +61,7 @@ export default function LegalPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            No guarantee of outcomes
+            No Guarantee of Outcomes
           </h2>
           <p className="mt-3">
             LifestyleIQ does not promise weight loss, symptom resolution, or any
@@ -73,7 +73,7 @@ export default function LegalPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Website and store listings
+            Website and Store Listings
           </h2>
           <p className="mt-3">
             App Store and Google Play buttons on this site may be placeholders

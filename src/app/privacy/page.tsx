@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Privacy policy',
+  title: 'Privacy Policy',
   description:
     'How LifestyleIQ handles website contact messages and on-device diary data.',
   alternates: { canonical: '/privacy' },
@@ -18,7 +18,7 @@ export default function PrivacyPage() {
         </Link>
       </p>
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
-        Privacy policy
+        Privacy Policy
       </h1>
       <p className="mt-4 text-sm text-muted">Last updated: August 14, 2026</p>
 
@@ -34,7 +34,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Website contact form
+            Website Contact Form
           </h2>
           <p className="mt-3">
             If you send a message through the contact form, we collect your
@@ -47,7 +47,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            App diary data
+            App Diary Data
           </h2>
           <p className="mt-3">
             In the current app, diary entries are stored on your device. We do
@@ -59,7 +59,7 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
-            Analytics and cookies
+            Analytics and Cookies
           </h2>
           <p className="mt-3">
             This marketing site does not use advertising cookies or a third-party
@@ -69,7 +69,7 @@ export default function PrivacyPage() {
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-deep-navy">Your choices</h2>
+          <h2 className="text-xl font-semibold text-deep-navy">Your Choices</h2>
           <p className="mt-3">
             You can email {site.contactEmail} to ask what contact-form
             information we hold, or to request that we delete an inquiry you

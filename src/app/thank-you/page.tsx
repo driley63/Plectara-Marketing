@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Message sent',
+  title: 'Message Sent',
   description: 'Your message to LifestyleIQ was submitted.',
   robots: { index: false, follow: false },
   alternates: { canonical: '/thank-you' },
@@ -12,7 +12,7 @@ export default function ThankYouPage() {
   return (
     <main id="main" className="mx-auto max-w-[760px] px-4 py-20 sm:px-6 lg:px-8">
       <h1 className="text-4xl font-semibold tracking-tight text-deep-navy">
-        Message sent
+        Message Sent
       </h1>
       <p className="mt-4 text-base leading-7 text-muted">
         Thanks for writing. If you used the contact form, we will follow up at

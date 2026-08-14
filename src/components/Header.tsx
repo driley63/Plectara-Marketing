@@ -29,7 +29,7 @@ export function Header() {
             href="/#download"
             className="inline-flex h-10 min-w-11 items-center justify-center rounded-md bg-brand px-4 text-sm font-semibold text-white transition-colors duration-[120ms] hover:bg-evergreen/90"
           >
-            Get the app
+            Get the App
           </Link>
         </nav>
         <details className="relative md:hidden">
@@ -51,7 +51,7 @@ export function Header() {
                 href="/#download"
                 className="mt-1 inline-flex h-10 items-center justify-center rounded-md bg-brand px-3 text-sm font-semibold text-white"
               >
-                Get the app
+                Get the App
               </Link>
             </nav>
           </div>
