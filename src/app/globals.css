@@ -1,0 +1,97 @@
+@import 'tailwindcss';
+
+/* LIQ OS tokens — Brand Identity v1.1.0 + Design Language Volume 02
+   https://liq-os.lifestyleiq.io/specs/01-brand/color-system/
+   https://liq-os.lifestyleiq.io/specs/02-design/spacing-system/
+*/
+@theme {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  --color-evergreen: #16aa8d;
+  --color-fresh-lime: #a6e21e;
+  --color-growth-green: #62cf62;
+  --color-wellness-teal: #2ab39a;
+  --color-deep-navy: #0c1f33;
+  --color-slate-blue: #24566a;
+  --color-wellness-blue: #3cb8d9;
+  --color-energy-yellow: #f5c542;
+  --color-coral: #f46f61;
+  --color-ai-purple: #7b61ff;
+  --color-white: #ffffff;
+  --color-canvas: #f7fafb;
+  --color-divider: #dce5e8;
+  --color-light-gray: #a9b7bf;
+  --color-dark-gray: #5e7078;
+
+  --color-brand: var(--color-evergreen);
+  --color-highlight: var(--color-fresh-lime);
+  --color-text: var(--color-deep-navy);
+  --color-muted: var(--color-slate-blue);
+  --color-ai: var(--color-ai-purple);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  --shadow-elev-1: 0 1px 2px rgb(12 31 51 / 0.06);
+  --shadow-elev-2: 0 8px 24px rgb(12 31 51 / 0.08);
+}
+
+:root {
+  color-scheme: light;
+  --gradient-brand: linear-gradient(
+    135deg,
+    #a6e21e 0%,
+    #62cf62 35%,
+    #2ab39a 70%,
+    #16aa8d 100%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-text);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-evergreen);
+  outline-offset: 3px;
+}
+
+.brand-gradient {
+  background-image: var(--gradient-brand);
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -48px;
+  z-index: 50;
+  border-radius: 8px;
+  background: var(--color-deep-navy);
+  color: var(--color-white);
+  padding: 8px 16px;
+}
+
+.skip-link:focus {
+  top: 16px;
+}
