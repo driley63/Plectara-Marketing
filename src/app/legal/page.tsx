@@ -4,14 +4,14 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Legal Disclaimers',
   description:
-    'LifestyleIQ legal disclaimers: not medical advice, not a diagnostic product, and not a substitute for professional care.',
+    'Plectara legal disclaimers: not medical advice, not a diagnostic product, and not a substitute for professional care.',
   alternates: { canonical: '/legal' },
 };
 
 export default function LegalPage() {
   return (
     <main id="main" className="mx-auto max-w-[760px] px-4 py-16 sm:px-6 lg:px-8">
-      <p className="text-sm font-medium text-evergreen">
+      <p className="text-sm font-medium text-link">
         <Link href="/" className="hover:underline">
           Home
         </Link>
@@ -27,7 +27,7 @@ export default function LegalPage() {
             Not Medical Advice
           </h2>
           <p className="mt-3">
-            LifestyleIQ is a personal health diary with optional pattern
+            Plectara is a personal health diary with optional pattern
             spotting. Content in the app and on this website is for information
             and self-tracking only. It is not medical advice, a diagnosis, a
             treatment plan, or a substitute for consultation with a qualified
@@ -40,7 +40,7 @@ export default function LegalPage() {
             Not a Diagnostic Product
           </h2>
           <p className="mt-3">
-            LifestyleIQ does not diagnose, treat, cure, or prevent any disease
+            Plectara does not diagnose, treat, cure, or prevent any disease
             or condition. Insights may highlight correlations in your own logs.
             Correlation is not causation. Do not change medications, diet, or
             care based solely on an in-app insight.
@@ -64,7 +64,7 @@ export default function LegalPage() {
             No Guarantee of Outcomes
           </h2>
           <p className="mt-3">
-            LifestyleIQ does not promise weight loss, symptom resolution, or any
+            Plectara does not promise weight loss, symptom resolution, or any
             specific health outcome. Features that mention goals or suggestions
             are meant to support understanding and routine—not to certify
             results.
@@ -86,12 +86,16 @@ export default function LegalPage() {
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Contact</h2>
           <p className="mt-3">
-            Questions about these disclaimers can be sent through the{' '}
-            <Link href="/#contact" className="font-medium text-evergreen hover:underline">
+            Questions about these disclaimers can be sent through{' '}
+            <Link href="/support" className="font-medium text-link hover:underline">
+              product support
+            </Link>
+            , the{' '}
+            <Link href="/#contact" className="font-medium text-link hover:underline">
               contact form
-            </Link>{' '}
-            or the{' '}
-            <Link href="/privacy" className="font-medium text-evergreen hover:underline">
+            </Link>
+            , or the{' '}
+            <Link href="/privacy" className="font-medium text-link hover:underline">
               privacy policy
             </Link>
             .

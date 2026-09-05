@@ -25,7 +25,7 @@ function StoreButton({ href, label, store }: StoreButtonProps) {
     <a
       href={href}
       rel="noopener noreferrer"
-      className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-evergreen/90"
+      className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
     >
       {label}
     </a>

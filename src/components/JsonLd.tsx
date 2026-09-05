@@ -10,7 +10,7 @@ export function JsonLd() {
         name: site.name,
         url: site.url,
         email: site.contactEmail,
-        logo: `${site.url}/brand/lifestyleiq_app_icon_1024.png`,
+        logo: `${site.url}/brand/plectara-1024.png`,
         description: site.description,
       },
       {

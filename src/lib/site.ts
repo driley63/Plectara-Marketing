@@ -3,13 +3,14 @@
  * Store URLs stay empty until listings exist; the UI then shows Coming soon.
  */
 export const site = {
-  name: 'LifestyleIQ',
+  name: 'Plectara',
   tagline: 'Translating daily habits into a plan towards optimal health.',
   description:
-    'LifestyleIQ is a personal health intelligence platform that turns everyday habits into understandable patterns—so you can act with more clarity. Not a diagnostic product.',
+    'Plectara is a personal health intelligence platform that turns everyday habits into understandable patterns—so you can act with more clarity. Not a diagnostic product.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://lifestyleiq.io',
   contactEmail:
-    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'dustin@dustinriley.io',
+    process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'info@plectara.com',
+  supportEmail: 'support@plectara.com',
   appStoreUrl: process.env.NEXT_PUBLIC_APP_STORE_URL ?? '',
   playStoreUrl: process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? '',
 } as const;
@@ -27,7 +28,7 @@ export const features = [
     title: 'Pattern Insights',
     id: 'insights',
     ai: true,
-    body: 'LifestyleIQ looks across your diary to surface correlations and practical next steps. Insights are informational only. They do not diagnose, treat, or replace professional care.',
+    body: 'Plectara looks across your diary to surface correlations and practical next steps. Insights are informational only. They do not diagnose, treat, or replace professional care.',
   },
   {
     title: 'Track What Matters to You',

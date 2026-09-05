@@ -1,15 +1,16 @@
-# LifestyleIQ marketing site
+# Plectara marketing site
 
-Public marketing site for [LifestyleIQ](https://lifestyleiq.io): a personal health intelligence platform.
+Public marketing site for [Plectara](https://lifestyleiq.io): a personal health intelligence platform.
 
-Brand, color, type, and logo rules follow **[LIQ OS](https://liq-os.lifestyleiq.io/)** (Brand Identity v1.1.0 and Design Language Volume 02). Do not invent one-off palette or wordmark treatments.
+Brand, color, type, and logo rules follow **[PL-OS / LIQ OS](https://liq-os.lifestyleiq.io/)** (Plectara brand kit v2.0.0 and Design Language Volume 02). Do not invent one-off palette or wordmark treatments, and do not recreate the wordmark with a font.
 
 ## What’s included
 
 - SEO metadata, sitemap, robots, and JSON-LD
-- Overview, feature list, legal disclaimers, and privacy policy
+- Overview, feature list, product support, legal disclaimers, and privacy policy
 - App Store / Google Play links (empty env vars render as **Coming soon**)
-- Contact form delivered to `NEXT_PUBLIC_CONTACT_EMAIL` via [FormSubmit](https://formsubmit.co)
+- Homepage contact form delivered to `NEXT_PUBLIC_CONTACT_EMAIL` via [FormSubmit](https://formsubmit.co)
+- Product support form delivered to `support@plectara.com`
 
 ## Local development
 
@@ -26,7 +27,7 @@ Open [http://localhost:3000](http://localhost:3000).
 | Variable | Purpose |
 | --- | --- |
 | `NEXT_PUBLIC_SITE_URL` | Canonical origin for sitemap, Open Graph, and form redirect |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | Inbox for the contact form (currently `dustin@dustinriley.io`) |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Inbox for the homepage contact form (currently `info@plectara.com`) |
 | `NEXT_PUBLIC_APP_STORE_URL` | iOS listing. Leave blank to stub |
 | `NEXT_PUBLIC_PLAY_STORE_URL` | Android listing. Leave blank to stub |
 
@@ -34,10 +35,10 @@ The first FormSubmit delivery to a new address requires an email confirmation fr
 
 ## Brand assets
 
-`public/brand/` holds the product icon (from the LifestyleIQ app) and LIQ OS source SVGs. The horizontal SVG is a reviewed placeholder until optical refinement is approved in LIQ OS.
+`public/brand/` holds the approved Plectara lockups, symbol, app tile, and social card from the PL-OS brand kit.
 
 ## Stack
 
 - Next.js (App Router) and TypeScript
-- Tailwind CSS mapped to LIQ OS tokens
+- Tailwind CSS mapped to Plectara / PL-OS tokens
 - Inter via `next/font`

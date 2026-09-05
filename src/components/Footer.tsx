@@ -41,6 +41,11 @@ export function Footer() {
           <h2 className="text-sm font-semibold">Legal</h2>
           <ul className="mt-3 space-y-2 text-sm text-light-gray">
             <li>
+              <Link href="/support" className="hover:text-white">
+                Support
+              </Link>
+            </li>
+            <li>
               <Link href="/legal" className="hover:text-white">
                 Disclaimers
               </Link>
@@ -60,7 +65,7 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-[1120px] px-4 py-4 text-center text-xs text-light-gray sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} {site.name}. LifestyleIQ is not a medical
+          © {new Date().getFullYear()} {site.name}. Plectara is not a medical
           device and does not provide medical advice.
         </p>
       </div>

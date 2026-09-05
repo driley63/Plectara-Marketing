@@ -33,7 +33,7 @@ export default function HomePage() {
               Translating Daily Habits into a Plan Towards Optimal Health.
             </h1>
             <p className="mt-6 max-w-[560px] text-lg leading-8 text-white/85">
-              LifestyleIQ helps you understand how daily habits affect
+              Plectara helps you understand how daily habits affect
               health—then turns those signals into a plan you can actually
               follow. It is a diary with pattern spotting, not a doctor, not a
               chatbot, and not a generic tracker.
@@ -41,7 +41,7 @@ export default function HomePage() {
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
                 href="#download"
-                className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-evergreen/90"
+                className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
               >
                 Get the App
               </Link>
@@ -74,7 +74,7 @@ export default function HomePage() {
               Built Around Daily Life, Not Data Collection
             </h2>
             <p className="mt-5 max-w-[760px] text-base leading-7 text-muted">
-              Most health apps ask you to track more. LifestyleIQ asks you to
+              Most health apps ask you to track more. Plectara asks you to
               understand more. Log the parts of your day that matter—meals,
               movement, sleep, symptoms, vitals, medications—and the app looks
               for patterns you can use.
@@ -128,7 +128,7 @@ export default function HomePage() {
                 id="features-heading"
                 className="text-3xl font-semibold tracking-tight text-deep-navy"
               >
-                What You Can Do in LifestyleIQ
+                What You Can Do in Plectara
               </h2>
               <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
                 A focused health diary for iOS and Android, with insights that
@@ -173,7 +173,7 @@ export default function HomePage() {
               id="download-heading"
               className="text-3xl font-semibold tracking-tight text-deep-navy"
             >
-              Get LifestyleIQ
+              Get Plectara
             </h2>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
               App Store and Google Play listings will appear here when the app
@@ -211,15 +211,22 @@ export default function HomePage() {
               Contact
             </h2>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-              Questions about LifestyleIQ, press, or partnership? Send a
-              message. This form is for general inquiries, not medical
-              emergencies or clinical advice.
+              Questions about Plectara, press, or partnership? Send a
+              message. For help with the app, use{' '}
+              <Link
+                href="/support"
+                className="font-medium text-link underline-offset-2 hover:underline"
+              >
+                product support
+              </Link>
+              . These forms are for general inquiries, not medical emergencies
+              or clinical advice.
             </p>
             <p className="mt-4 text-sm text-muted">
               You can also email{' '}
               <a
                 href={`mailto:${site.contactEmail}`}
-                className="font-medium text-evergreen underline-offset-2 hover:underline"
+                className="font-medium text-link underline-offset-2 hover:underline"
               >
                 {site.contactEmail}
               </a>
@@ -244,20 +251,20 @@ export default function HomePage() {
             Not Medical Advice
           </h2>
           <p className="mt-3 text-sm leading-6 text-muted">
-            LifestyleIQ is a personal log with pattern spotting. Insights are
+            Plectara is a personal log with pattern spotting. Insights are
             informational only. They do not diagnose, treat, or replace
             professional medical care. Urgent or worsening symptoms deserve
             professional attention—do not wait on an app insight. Read the{' '}
             <Link
               href="/legal"
-              className="font-medium text-evergreen underline-offset-2 hover:underline"
+              className="font-medium text-link underline-offset-2 hover:underline"
             >
               full legal disclaimers
             </Link>{' '}
             and{' '}
             <Link
               href="/privacy"
-              className="font-medium text-evergreen underline-offset-2 hover:underline"
+              className="font-medium text-link underline-offset-2 hover:underline"
             >
               privacy policy
             </Link>

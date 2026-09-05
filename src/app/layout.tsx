@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: site.description,
   applicationName: site.name,
   keywords: [
-    'LifestyleIQ',
+    'Plectara',
     'personal health intelligence',
     'health diary',
     'habit tracking',
@@ -40,18 +40,18 @@ export const metadata: Metadata = {
     description: site.description,
     images: [
       {
-        url: '/brand/lifestyleiq_app_icon_1024.png',
-        width: 1024,
-        height: 1024,
-        alt: 'LifestyleIQ app icon',
+        url: '/brand/plectara-social-card.png',
+        width: 1200,
+        height: 630,
+        alt: 'Plectara',
       },
     ],
   },
   twitter: {
-    card: 'summary',
+    card: 'summary_large_image',
     title: `${site.name} — Personal Health Intelligence`,
     description: site.description,
-    images: ['/brand/lifestyleiq_app_icon_1024.png'],
+    images: ['/brand/plectara-social-card.png'],
   },
   robots: {
     index: true,
@@ -59,15 +59,16 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/brand/lifestyleiq-icon.svg', type: 'image/svg+xml' },
-      { url: '/brand/lifestyleiq_app_icon_512.png', sizes: '512x512' },
+      { url: '/brand/plectara-symbol.svg', type: 'image/svg+xml' },
+      { url: '/brand/favicon.ico' },
+      { url: '/brand/plectara-512.png', sizes: '512x512' },
     ],
-    apple: [{ url: '/brand/lifestyleiq_app_icon_512.png', sizes: '512x512' }],
+    apple: [{ url: '/brand/plectara-512.png', sizes: '512x512' }],
   },
 };
 
 export const viewport: Viewport = {
-  themeColor: '#16AA8D',
+  themeColor: '#287E80',
   width: 'device-width',
   initialScale: 1,
 };

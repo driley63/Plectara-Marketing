@@ -8,11 +8,11 @@ export default function manifest(): MetadataRoute.Manifest {
     description: site.description,
     start_url: '/',
     display: 'browser',
-    background_color: '#F7FAFB',
-    theme_color: '#16AA8D',
+    background_color: '#FAF8F4',
+    theme_color: '#287E80',
     icons: [
       {
-        src: '/brand/lifestyleiq_app_icon_512.png',
+        src: '/brand/plectara-512.png',
         sizes: '512x512',
         type: 'image/png',
       },

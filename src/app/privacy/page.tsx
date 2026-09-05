@@ -1,29 +1,30 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How LifestyleIQ stores diary data on your device, optional Apple Health and Health Connect imports, and your rights.',
+    'How Plectara stores diary data on your device, optional Apple Health and Health Connect imports, and your rights.',
   alternates: { canonical: '/privacy' },
 };
 
 export default function PrivacyPage() {
   return (
     <main id="main" className="mx-auto max-w-[760px] px-4 py-16 sm:px-6 lg:px-8">
-      <p className="text-sm font-medium text-evergreen">
+      <p className="text-sm font-medium text-link">
         <Link href="/" className="hover:underline">
           Home
         </Link>
       </p>
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
-        LifestyleIQ Privacy Policy
+        Plectara Privacy Policy
       </h1>
       <p className="mt-4 text-sm text-muted">Last updated: 18 August 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
-          This policy describes how LifestyleIQ handles information on your
+          This policy describes how Plectara handles information on your
           device. It is written for users in the United States and is also
           intended to meet the spirit of the EU GDPR for health data.
         </p>
@@ -31,7 +32,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Who We Are</h2>
           <p className="mt-3">
-            LifestyleIQ is a personal health diary. It is not a medical device
+            Plectara is a personal health diary. It is not a medical device
             and does not diagnose or treat conditions.
           </p>
         </section>
@@ -42,7 +43,7 @@ export default function PrivacyPage() {
             Diary entries you log (including meals, symptoms, sleep, activity,
             vitals, weight, medications, and notes), optional photos you attach
             to saved meals, preferences, and onboarding choices are stored on
-            this device. We do not operate a LifestyleIQ cloud account yet.
+            this device. We do not operate a Plectara cloud account yet.
             Future cloud sync will require a separate, explicit consent.
           </p>
         </section>
@@ -53,9 +54,9 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-3">
             If you choose to connect Apple Health (iOS) or Health Connect
-            (Android), LifestyleIQ reads — and does not write — the following
+            (Android), Plectara reads — and does not write — the following
             data from that store, only from the date you started using
-            LifestyleIQ:
+            Plectara:
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5">
             <li>Sleep sessions</li>
@@ -69,7 +70,7 @@ export default function PrivacyPage() {
             bowel logs, clinical records, or other Health categories.
           </p>
           <p className="mt-3">
-            Imported rows become LifestyleIQ diary entries. They count toward
+            Imported rows become Plectara diary entries. They count toward
             logging, streaks, and insights the same as entries you type in. They
             are labeled so you can see they came from Apple Health or Health
             Connect.
@@ -81,9 +82,9 @@ export default function PrivacyPage() {
           <p className="mt-3">
             Connecting is optional and skippable during onboarding. You can
             connect or disconnect later in Preferences. Disconnecting stops new
-            imports. Copies already in LifestyleIQ stay until you delete those
+            imports. Copies already in Plectara stay until you delete those
             entries or remove the app. After disconnect we will not query Apple
-            Health or Health Connect again. You can also revoke LifestyleIQ in
+            Health or Health Connect again. You can also revoke Plectara in
             the Health or Health Connect apps on your device.
           </p>
         </section>
@@ -92,14 +93,14 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold text-deep-navy">Your Rights</h2>
           <p className="mt-3">
             You can edit or delete individual diary entries in the app.
-            Uninstalling LifestyleIQ removes local data on that device. If GDPR
+            Uninstalling Plectara removes local data on that device. If GDPR
             applies to you, you may request access or erasure of personal data
             we hold by emailing{' '}
             <a
-              href="mailto:dustin@dustinriley.io"
-              className="font-medium text-evergreen underline-offset-2 hover:underline"
+              href={`mailto:${site.supportEmail}`}
+              className="font-medium text-link underline-offset-2 hover:underline"
             >
-              dustin@dustinriley.io
+              {site.supportEmail}
             </a>
             . Because v1 stores data on-device, erasure on this phone is done by
             deleting entries or the app.
@@ -114,7 +115,7 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Children</h2>
           <p className="mt-3">
-            LifestyleIQ is not directed at children under 16.
+            Plectara is not directed at children under 16.
           </p>
         </section>
 
@@ -129,12 +130,21 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Contact</h2>
           <p className="mt-3">
+            Privacy questions:{' '}
             <a
-              href="mailto:driley@vesperiq.io"
-              className="font-medium text-evergreen underline-offset-2 hover:underline"
+              href={`mailto:${site.supportEmail}`}
+              className="font-medium text-link underline-offset-2 hover:underline"
             >
-              driley@vesperiq.io
+              {site.supportEmail}
             </a>
+            . For help using the app, visit{' '}
+            <Link
+              href="/support"
+              className="font-medium text-link underline-offset-2 hover:underline"
+            >
+              product support
+            </Link>
+            .
           </p>
         </section>
       </div>

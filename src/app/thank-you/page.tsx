@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Message Sent',
-  description: 'Your message to LifestyleIQ was submitted.',
+  description: 'Your message to Plectara was submitted.',
   robots: { index: false, follow: false },
   alternates: { canonical: '/thank-you' },
 };

@@ -13,7 +13,7 @@ export default function NotFound() {
         Page Not Found
       </h1>
       <p className="mt-4 text-base leading-7 text-muted">
-        That URL is not part of the LifestyleIQ site.
+        That URL is not part of the Plectara site.
       </p>
       <p className="mt-8">
         <Link

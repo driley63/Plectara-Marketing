@@ -1,52 +1,56 @@
 @import 'tailwindcss';
 
-/* LIQ OS tokens — Brand Identity v1.1.0 + Design Language Volume 02
+/* Plectara / PL-OS tokens — Brand Identity v2.0.0
    https://liq-os.lifestyleiq.io/specs/01-brand/color-system/
    https://liq-os.lifestyleiq.io/specs/02-design/spacing-system/
 */
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 
-  --color-evergreen: #16aa8d;
-  --color-fresh-lime: #a6e21e;
-  --color-growth-green: #62cf62;
-  --color-wellness-teal: #2ab39a;
-  --color-deep-navy: #0c1f33;
-  --color-slate-blue: #24566a;
-  --color-wellness-blue: #3cb8d9;
-  --color-energy-yellow: #f5c542;
-  --color-coral: #f46f61;
+  --color-teal: #287e80;
+  --color-jade: #76b7a5;
+  --color-copper: #c88764;
+  --color-ink: #192d38;
+  --color-slate: #567788;
+  --color-ivory: #faf8f4;
+
+  /* Legacy class names mapped onto Plectara primitives */
+  --color-evergreen: var(--color-teal);
+  --color-fresh-lime: var(--color-jade);
+  --color-growth-green: var(--color-jade);
+  --color-wellness-teal: var(--color-teal);
+  --color-deep-navy: var(--color-ink);
+  --color-slate-blue: var(--color-slate);
+  --color-wellness-blue: #286a8a;
+  --color-energy-yellow: #8a5900;
+  --color-coral: #b53e3e;
   --color-ai-purple: #7b61ff;
   --color-white: #ffffff;
-  --color-canvas: #f7fafb;
-  --color-divider: #dce5e8;
-  --color-light-gray: #a9b7bf;
-  --color-dark-gray: #5e7078;
+  --color-canvas: var(--color-ivory);
+  --color-divider: #d8e1de;
+  --color-light-gray: #b8cbcb;
+  --color-dark-gray: #567788;
 
-  --color-brand: var(--color-evergreen);
-  --color-highlight: var(--color-fresh-lime);
-  --color-text: var(--color-deep-navy);
-  --color-muted: var(--color-slate-blue);
-  --color-ai: var(--color-ai-purple);
+  --color-brand: var(--color-teal);
+  --color-brand-hover: #206668;
+  --color-highlight: var(--color-jade);
+  --color-text: var(--color-ink);
+  --color-muted: #506f7e;
+  --color-link: #206668;
+  --color-ai: #6748d8;
 
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 12px;
   --radius-xl: 16px;
 
-  --shadow-elev-1: 0 1px 2px rgb(12 31 51 / 0.06);
-  --shadow-elev-2: 0 8px 24px rgb(12 31 51 / 0.08);
+  --shadow-elev-1: 0 1px 2px rgb(25 45 56 / 0.06);
+  --shadow-elev-2: 0 8px 24px rgb(25 45 56 / 0.08);
 }
 
 :root {
   color-scheme: light;
-  --gradient-brand: linear-gradient(
-    135deg,
-    #a6e21e 0%,
-    #62cf62 35%,
-    #2ab39a 70%,
-    #16aa8d 100%
-  );
+  --gradient-brand: linear-gradient(135deg, #287e80 0%, #76b7a5 100%);
 }
 
 html {
@@ -73,7 +77,7 @@ body {
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-evergreen);
+  outline: 2px solid var(--color-teal);
   outline-offset: 3px;
 }
 
@@ -87,7 +91,7 @@ body {
   top: -48px;
   z-index: 50;
   border-radius: 8px;
-  background: var(--color-deep-navy);
+  background: var(--color-ink);
   color: var(--color-white);
   padding: 8px 16px;
 }
