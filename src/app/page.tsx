@@ -79,7 +79,7 @@ export default function HomePage() {
               id="overview-heading"
               className="text-3xl font-semibold tracking-tight text-deep-navy"
             >
-              Built Around Daily Life, Not Data Collection
+              Built Around Daily Life
             </h2>
             <p className="mt-5 max-w-[760px] text-base leading-7 text-muted">
               Most health apps ask you to track more. Plectara asks you to
@@ -138,7 +138,7 @@ export default function HomePage() {
               },
               {
                 title: 'Glanceable, Not Exposed',
-                body: 'Actions stay short and privacy-aware. Trends, scores, and interpretation stay in the app, where you choose to look.',
+                body: 'The Home Screen shows capture actions—not scores, trends, or interpretation. Those stay in the app, where you choose to look.',
               },
             ].map((item) => (
               <li key={item.title}>
@@ -183,7 +183,7 @@ export default function HomePage() {
               <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
                 A focused health diary for iOS and Android. The features below
                 exist to make daily capture easier and the picture of your
-                health clearer—not to collect more data for its own sake.
+                health clearer. Log what matters; skip the rest.
               </p>
               <ul className="mt-8 grid gap-6 sm:grid-cols-2">
                 {features.map((feature) => (

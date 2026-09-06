@@ -19,7 +19,7 @@ export default function LegalPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Legal Disclaimers
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: August 14, 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 6 September 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <section>
@@ -28,10 +28,10 @@ export default function LegalPage() {
           </h2>
           <p className="mt-3">
             Plectara is a personal health diary with optional pattern
-            spotting. Content in the app and on this website is for information
-            and self-tracking only. It is not medical advice, a diagnosis, a
-            treatment plan, or a substitute for consultation with a qualified
-            clinician.
+            spotting and optional AI explanations or chat. Content in the app
+            and on this website is for information and self-tracking only. It
+            is not medical advice, a diagnosis, a treatment plan, or a
+            substitute for consultation with a qualified clinician.
           </p>
         </section>
 
@@ -41,9 +41,10 @@ export default function LegalPage() {
           </h2>
           <p className="mt-3">
             Plectara does not diagnose, treat, cure, or prevent any disease
-            or condition. Insights may highlight correlations in your own logs.
-            Correlation is not causation. Do not change medications, diet, or
-            care based solely on an in-app insight.
+            or condition. Insights and optional AI may highlight correlations
+            in your own logs. Correlation is not causation. Do not change
+            medications, diet, or care based solely on an in-app insight or
+            chat reply.
           </p>
         </section>
 

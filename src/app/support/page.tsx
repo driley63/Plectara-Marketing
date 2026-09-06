@@ -6,7 +6,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Product Support',
   description:
-    'Get help with Plectara: how to reach us, common app questions, and how to manage your on-device diary.',
+    'Get help with Plectara: how to reach us, common app questions, and how to manage your diary, sync, and privacy controls.',
   alternates: { canonical: '/support' },
 };
 
@@ -32,9 +32,9 @@ const faqs = [
     title: 'Where Is My Diary Stored?',
     body: (
       <>
-        Plectara stores your log on this device. There is no Plectara cloud
-        account yet. Future cloud sync will require a separate, explicit
-        consent. See the{' '}
+        Plectara keeps a copy of your log on this device and syncs it to your
+        Plectara account. Sync is part of the service. Health import and
+        optional cloud AI are separate. See the{' '}
         <Link
           href="/privacy"
           className="font-medium text-link underline-offset-2 hover:underline"
@@ -51,9 +51,9 @@ const faqs = [
       <>
         Connecting is optional. You can skip it during onboarding and connect or
         disconnect later in Preferences. Disconnecting stops new imports.
-        Entries already copied into Plectara stay until you delete them or
-        remove the app. You can also revoke access in the Health or Health
-        Connect apps on your device.
+        Entries already copied into Plectara stay in your diary (including the
+        synced copy) until you delete them. You can also revoke access in the
+        Health or Health Connect apps on your device.
       </>
     ),
   },
@@ -62,8 +62,8 @@ const faqs = [
     body: (
       <>
         Edit or delete individual diary entries in the app. Uninstalling
-        Plectara removes local data on that device. If GDPR applies to you and
-        you need help with an access or erasure request, email{' '}
+        Plectara removes local data on that device. It does not by itself erase
+        a synced account. Email{' '}
         <a
           href={`mailto:${site.supportEmail}`}
           className="font-medium text-link underline-offset-2 hover:underline"
@@ -78,9 +78,10 @@ const faqs = [
     title: 'Is Plectara Medical Advice?',
     body: (
       <>
-        No. Plectara is a personal health diary with optional pattern spotting.
-        It does not diagnose, treat, or replace professional care. Urgent or
-        worsening symptoms deserve a clinician or emergency services. Read the{' '}
+        No. Plectara is a personal health diary with optional pattern spotting
+        and optional AI that explains findings. It does not diagnose, treat, or
+        replace professional care. Urgent or worsening symptoms deserve a
+        clinician or emergency services. Read the{' '}
         <Link
           href="/legal"
           className="font-medium text-link underline-offset-2 hover:underline"
