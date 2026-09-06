@@ -66,6 +66,14 @@ export const features = [
   },
 ] as const;
 
+export const deviceShots = {
+  hero: 'hero-phone.png',
+  today: 'today-tab.png',
+  timeline: 'timeline-tab.png',
+  charts: 'charts-tab.png',
+  insights: 'insights-tab.png',
+} as const;
+
 export const widgetShots = [
   {
     aspect: 'widget-small' as const,

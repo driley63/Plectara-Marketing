@@ -2,7 +2,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { JsonLd } from '@/components/JsonLd';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { StoreLinks } from '@/components/StoreLinks';
-import { features, pillars, site, widgetShots } from '@/lib/site';
+import { deviceShots, features, pillars, site, widgetShots } from '@/lib/site';
 import { existsSync } from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -56,9 +56,11 @@ export default function HomePage() {
             </div>
           </div>
           <PhotoPlaceholder
-            className="hidden justify-self-end lg:flex [&_figcaption]:sr-only"
-            frameClassName="origin-bottom rotate-[18deg] shadow-2xl"
+            className="hidden justify-self-end lg:flex"
+            frameClassName="origin-bottom rotate-[18deg] drop-shadow-2xl"
             label="Today tab on device"
+            src={marketingSrc(deviceShots.hero)}
+            priority
           />
         </div>
       </section>
@@ -99,7 +101,11 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <PhotoPlaceholder className="mx-auto" label="Timeline tab on device" />
+          <PhotoPlaceholder
+            className="mx-auto"
+            label="Timeline tab on device"
+            src={marketingSrc(deviceShots.timeline)}
+          />
         </div>
       </section>
 
@@ -144,15 +150,25 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <div className="mt-12 flex flex-wrap items-end justify-center gap-8 lg:justify-start">
-            {widgetShots.map((shot) => (
-              <PhotoPlaceholder
-                key={shot.file}
-                aspect={shot.aspect}
-                label={shot.label}
-                src={marketingSrc(shot.file)}
-              />
-            ))}
+          <div className="mt-14 border-t border-divider pt-12">
+            <h3 className="text-2xl font-semibold tracking-tight text-deep-navy">
+              Three Sizes, One Job
+            </h3>
+            <p className="mt-3 max-w-[640px] text-base leading-7 text-muted">
+              Log a meal, a walk, or sleep from the Home Screen in a tap.
+              Habits and favorites surface when they help—so capture stays
+              quick and the diary stays complete.
+            </p>
+            <div className="mt-10 flex flex-wrap items-end justify-center gap-8 lg:justify-start">
+              {widgetShots.map((shot) => (
+                <PhotoPlaceholder
+                  key={shot.file}
+                  aspect={shot.aspect}
+                  label={shot.label}
+                  src={marketingSrc(shot.file)}
+                />
+              ))}
+            </div>
           </div>
         </div>
       </section>
@@ -167,6 +183,7 @@ export default function HomePage() {
             <PhotoPlaceholder
               className="mx-auto max-md:hidden"
               label="Insights tab on device"
+              src={marketingSrc(deviceShots.insights)}
             />
             <div>
               <h2
@@ -235,10 +252,12 @@ export default function HomePage() {
             <PhotoPlaceholder
               className="absolute left-4 top-0 max-sm:hidden"
               label="Today tab on device"
+              src={marketingSrc(deviceShots.today)}
             />
             <PhotoPlaceholder
               className="relative z-10 ml-16"
-              label="Insights tab on device"
+              label="Charts tab on device"
+              src={marketingSrc(deviceShots.charts)}
             />
           </div>
         </div>
