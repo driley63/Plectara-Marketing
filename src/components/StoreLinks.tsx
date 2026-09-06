@@ -1,50 +1,84 @@
 import { site } from '@/lib/site';
 
-type StoreButtonProps = {
-  href: string;
-  label: string;
-  store: string;
-};
-
-function StoreButton({ href, label, store }: StoreButtonProps) {
-  const ready = href.length > 0;
-
-  if (!ready) {
-    return (
-      <p className="flex min-h-12 items-center justify-center rounded-md border border-divider bg-white px-5 text-center">
-        <span className="text-sm font-semibold text-deep-navy">{label}</span>
-        <span className="ml-2 rounded-sm bg-canvas px-2 py-0.5 text-xs font-medium text-muted">
-          Coming soon
-        </span>
-        <span className="sr-only"> {store} listing is not available yet.</span>
-      </p>
-    );
-  }
-
-  return (
-    <a
-      href={href}
-      rel="noopener noreferrer"
-      className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
-    >
-      {label}
-    </a>
-  );
-}
+/**
+ * Official store badges, used as provided.
+ * Apple: preferred black US/UK “Download on the App Store” (min 40px).
+ * Google: “Get it on Google Play” (min 28px; at least as large as the App Store badge).
+ * Do not recolor, overlay, or crop the badge artwork. Transparent canvas around
+ * the Play PNG was removed so both badges can share the same 40px height.
+ */
+const badges = [
+  {
+    href: site.appStoreUrl,
+    src: '/store/download-on-the-app-store.svg',
+    alt: 'Download on the App Store',
+    store: 'Apple App Store',
+    width: 120,
+    height: 40,
+  },
+  {
+    href: site.playStoreUrl,
+    src: '/store/get-it-on-google-play.png',
+    alt: 'Get it on Google Play',
+    store: 'Google Play',
+    width: 564,
+    height: 168,
+  },
+] as const;
 
 export function StoreLinks() {
   return (
-    <div className="flex flex-col gap-3 sm:flex-row sm:flex-wrap">
-      <StoreButton
-        href={site.appStoreUrl}
-        label="Download on the App Store"
-        store="Apple App Store"
-      />
-      <StoreButton
-        href={site.playStoreUrl}
-        label="Get it on Google Play"
-        store="Google Play"
-      />
+    <div>
+      <div className="flex flex-wrap items-start gap-x-6 gap-y-4">
+        {badges.map((badge) => {
+          const ready = badge.href.length > 0;
+          const image = (
+            // Official artwork: render as-is, without Next.js image transforms.
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={badge.src}
+              alt={ready ? badge.alt : ''}
+              width={badge.width}
+              height={badge.height}
+              className="h-10 w-auto"
+            />
+          );
+
+          return (
+            <figure
+              key={badge.store}
+              className="m-0 flex flex-col items-center p-2.5"
+            >
+              {ready ? (
+                <a
+                  href={badge.href}
+                  rel="noopener noreferrer"
+                  className="inline-block"
+                >
+                  {image}
+                </a>
+              ) : (
+                <div>
+                  {image}
+                  <span className="sr-only">
+                    {badge.store} listing is not available yet.
+                  </span>
+                </div>
+              )}
+              {ready ? null : (
+                <figcaption className="mt-2 text-center text-xs font-medium text-muted">
+                  Coming soon
+                </figcaption>
+              )}
+            </figure>
+          );
+        })}
+      </div>
+      <p className="mt-3 max-w-[40rem] text-xs leading-5 text-muted">
+        Apple, the Apple logo, and App Store are trademarks of Apple Inc.,
+        registered in the U.S. and other countries. Google Play and the Google
+        Play logo are trademarks of Google LLC.
+      </p>
     </div>
   );
 }

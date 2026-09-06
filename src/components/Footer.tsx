@@ -70,8 +70,9 @@ export function Footer() {
       </div>
       <div className="border-t border-white/10">
         <p className="mx-auto max-w-[1120px] px-4 py-4 text-center text-xs text-light-gray sm:px-6 lg:px-8">
-          © {new Date().getFullYear()} {site.name}. Plectara is not a medical
-          device and does not provide medical advice.
+          © {new Date().getFullYear()} {site.legalEntity}. Plectara is a
+          VesperIQ product. Plectara is not a medical device and does not
+          provide medical advice.
         </p>
       </div>
     </footer>

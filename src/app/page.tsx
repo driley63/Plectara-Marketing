@@ -31,7 +31,7 @@ export default function HomePage() {
           className="absolute inset-0 bg-gradient-to-r from-deep-navy via-deep-navy/80 to-deep-navy/35"
           aria-hidden="true"
         />
-        <div className="relative mx-auto grid max-w-[1120px] items-center gap-10 px-4 py-16 sm:px-6 min-h-[34rem] lg:min-h-[40rem] lg:grid-cols-[1fr_auto] lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-[1120px] items-center gap-10 px-4 py-16 sm:px-6 min-h-[34rem] lg:min-h-[40rem] lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16 xl:gap-x-24 lg:px-8 lg:py-24">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-fresh-lime">
               Personal health intelligence
@@ -46,23 +46,18 @@ export default function HomePage() {
               understanding: patterns, habits, and optional AI that stays
               honest about its limits.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+            <div className="mt-8">
               <Link
                 href="#download"
                 className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
               >
                 Get the App
               </Link>
-              <Link
-                href="#widgets"
-                className="inline-flex h-12 min-w-11 items-center justify-center rounded-md border border-white/40 bg-white/10 px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-white/20"
-              >
-                See Widgets
-              </Link>
             </div>
           </div>
           <PhotoPlaceholder
-            className="mx-auto max-lg:hidden"
+            className="hidden justify-self-end lg:flex [&_figcaption]:sr-only"
+            frameClassName="origin-bottom rotate-[18deg] shadow-2xl"
             label="Today tab on device"
           />
         </div>
@@ -229,8 +224,8 @@ export default function HomePage() {
             </h2>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
               App Store and Google Play listings will appear here when the app
-              is ready for public download. Store links are placeholders for
-              now.
+              is ready for public download. Official store badges are shown
+              below; links will go live with the listings.
             </p>
             <div className="mt-8">
               <StoreLinks />

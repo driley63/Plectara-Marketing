@@ -11,6 +11,7 @@ export const site = {
   contactEmail:
     process.env.NEXT_PUBLIC_CONTACT_EMAIL ?? 'info@plectara.com',
   supportEmail: 'support@plectara.com',
+  legalEntity: 'VesperIQ LLC',
   appStoreUrl: process.env.NEXT_PUBLIC_APP_STORE_URL ?? '',
   playStoreUrl: process.env.NEXT_PUBLIC_PLAY_STORE_URL ?? '',
 } as const;
@@ -31,6 +32,10 @@ export const pillars = [
 ] as const;
 
 export const features = [
+  {
+    title: 'Home Screen Widgets',
+    body: 'Log sleep, meals, movement, and the things you repeat from the Home Screen—without opening Plectara first. The widget is for capture. Scores, trends, and interpretation stay in the app.',
+  },
   {
     title: 'Habits That Fit Your Life',
     body: 'Repeated logs can become learned habits. Plectara may promote them on the widget and in Quick Log when they are likely to help—without making you design every shortcut first. You can pin, hide, rename, or remove what it learned.',

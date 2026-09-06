@@ -17,6 +17,7 @@ const widths = {
 type PhotoPlaceholderProps = {
   label: string;
   className?: string;
+  frameClassName?: string;
   aspect?: keyof typeof aspects;
   /** When set, renders the screenshot. Leave unset to keep the dashed stub. */
   src?: string;
@@ -30,6 +31,7 @@ type PhotoPlaceholderProps = {
 export function PhotoPlaceholder({
   label,
   className = '',
+  frameClassName = '',
   aspect = 'phone',
   src,
   alt,
@@ -39,7 +41,7 @@ export function PhotoPlaceholder({
       <div
         className={`relative overflow-hidden rounded-lg border ${aspects[aspect]} ${
           src ? 'border-divider bg-canvas' : 'border-dashed border-divider bg-canvas'
-        }`}
+        } ${frameClassName}`}
       >
         {src ? (
           <Image
