@@ -16,7 +16,6 @@ const sizes = {
  * Plectara horizontal lockup (woven person + outlined wordmark).
  * Light: ink lettering on ivory/white. Reversed: white lockup on ink.
  * Do not recreate the wordmark with a font.
- * https://liq-os.lifestyleiq.io/specs/01-brand/logo-usage/
  */
 export function BrandMark({
   reversed = false,

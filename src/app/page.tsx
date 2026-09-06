@@ -2,9 +2,16 @@ import { ContactForm } from '@/components/ContactForm';
 import { JsonLd } from '@/components/JsonLd';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { StoreLinks } from '@/components/StoreLinks';
-import { features, site } from '@/lib/site';
+import { features, pillars, site, widgetShots } from '@/lib/site';
+import { existsSync } from 'fs';
 import Image from 'next/image';
 import Link from 'next/link';
+import path from 'path';
+
+function marketingSrc(file: string) {
+  const onDisk = path.join(process.cwd(), 'public', 'marketing', file);
+  return existsSync(onDisk) ? `/marketing/${file}` : undefined;
+}
 
 export default function HomePage() {
   return (
@@ -35,8 +42,9 @@ export default function HomePage() {
             <p className="mt-6 max-w-[560px] text-lg leading-8 text-white/85">
               Plectara helps you understand how daily habits affect
               health—then turns those signals into a plan you can actually
-              follow. It is a diary with pattern spotting, not a doctor, not a
-              chatbot, and not a generic tracker.
+              follow. Capture from the Home Screen in a tap. The app is for
+              understanding: patterns, habits, and optional AI that stays
+              honest about its limits.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
               <Link
@@ -46,10 +54,10 @@ export default function HomePage() {
                 Get the App
               </Link>
               <Link
-                href="#features"
+                href="#widgets"
                 className="inline-flex h-12 min-w-11 items-center justify-center rounded-md border border-white/40 bg-white/10 px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-white/20"
               >
-                See Features
+                See Widgets
               </Link>
             </div>
           </div>
@@ -63,7 +71,7 @@ export default function HomePage() {
       <section
         id="overview"
         aria-labelledby="overview-heading"
-        className="border-t border-divider bg-white"
+        className="scroll-mt-20 border-t border-divider bg-white"
       >
         <div className="mx-auto grid max-w-[1120px] items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_auto] lg:px-8 lg:py-20">
           <div>
@@ -80,25 +88,13 @@ export default function HomePage() {
               for patterns you can use.
             </p>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-              AI is the engine, not the identity. Recommendations stay
-              practical and plain. The system does not diagnose conditions, and
-              it will not pretend otherwise.
+              Capture feeds the system. Habits personalize it. Insights deliver
+              the value. AI is the engine, not the identity: it can explain
+              findings and suggest what to log next, but it does not diagnose
+              conditions, and it will not pretend otherwise.
             </p>
             <ul className="mt-10 grid gap-8 sm:grid-cols-3">
-              {[
-                {
-                  title: 'Understand',
-                  body: 'See how habits, symptoms, and routines relate across days—not just a list of entries.',
-                },
-                {
-                  title: 'Act',
-                  body: 'Turn patterns into a calmer next step: what to log, what to watch, and when to talk to a clinician.',
-                },
-                {
-                  title: 'Stay in Control',
-                  body: 'Your diary stays on your device for now. You choose what to track, and you can change it as life changes.',
-                },
-              ].map((item) => (
+              {pillars.map((item) => (
                 <li key={item.title}>
                   <h3 className="text-lg font-semibold text-deep-navy">
                     {item.title}
@@ -113,12 +109,66 @@ export default function HomePage() {
       </section>
 
       <section
-        id="features"
-        aria-labelledby="features-heading"
-        className="border-t border-divider"
+        id="widgets"
+        aria-labelledby="widgets-heading"
+        className="scroll-mt-20 border-t border-divider"
       >
         <div className="mx-auto max-w-[1120px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid items-center gap-12 lg:grid-cols-[auto_1fr]">
+          <h2
+            id="widgets-heading"
+            className="text-3xl font-semibold tracking-tight text-deep-navy"
+          >
+            Capture From Your Home Screen
+          </h2>
+          <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
+            The widget is for capture. The app is for understanding. Log sleep,
+            meals, movement, and the things you repeat—without opening Plectara
+            first. Completing the day gets easier; the diary stays complete
+            enough to learn from.
+          </p>
+          <ul className="mt-8 grid gap-6 sm:grid-cols-3">
+            {[
+              {
+                title: 'One Tap When It Counts',
+                body: 'Repeated actions can save immediately. If a detail is required, the widget opens the exact capture screen—not a maze of tabs.',
+              },
+              {
+                title: 'Habits Show Up When Useful',
+                body: 'Learned habits and favorites can appear as suggestions at the times you actually use them, without turning the widget into a dashboard.',
+              },
+              {
+                title: 'Glanceable, Not Exposed',
+                body: 'Actions stay short and privacy-aware. Trends, scores, and interpretation stay in the app, where you choose to look.',
+              },
+            ].map((item) => (
+              <li key={item.title}>
+                <h3 className="text-lg font-semibold text-deep-navy">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">{item.body}</p>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-12 flex flex-wrap items-end justify-center gap-8 lg:justify-start">
+            {widgetShots.map((shot) => (
+              <PhotoPlaceholder
+                key={shot.file}
+                aspect={shot.aspect}
+                label={shot.label}
+                src={marketingSrc(shot.file)}
+              />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="features"
+        aria-labelledby="features-heading"
+        className="scroll-mt-20 border-t border-divider bg-white"
+      >
+        <div className="mx-auto max-w-[1120px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid items-start gap-12 lg:grid-cols-[auto_1fr]">
             <PhotoPlaceholder
               className="mx-auto max-md:hidden"
               label="Insights tab on device"
@@ -131,21 +181,23 @@ export default function HomePage() {
                 What You Can Do in Plectara
               </h2>
               <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-                A focused health diary for iOS and Android, with insights that
-                stay honest about their limits.
+                A focused health diary for iOS and Android. The features below
+                exist to make daily capture easier and the picture of your
+                health clearer—not to collect more data for its own sake.
               </p>
               <ul className="mt-8 grid gap-6 sm:grid-cols-2">
                 {features.map((feature) => (
                   <li
                     key={feature.title}
-                    className="rounded-md border border-divider bg-white p-5"
+                    id={'id' in feature ? feature.id : undefined}
+                    className="rounded-md border border-divider bg-canvas p-5"
                   >
                     <div className="flex flex-wrap items-center gap-2">
                       <h3 className="text-lg font-semibold text-deep-navy">
                         {feature.title}
                       </h3>
                       {'ai' in feature && feature.ai ? (
-                        <span className="inline-flex items-center gap-1 rounded-sm bg-canvas px-2 py-0.5 text-xs font-semibold text-ai">
+                        <span className="inline-flex items-center gap-1 rounded-sm bg-white px-2 py-0.5 text-xs font-semibold text-ai">
                           <span aria-hidden="true">●</span>
                           AI-assisted
                         </span>
@@ -165,7 +217,7 @@ export default function HomePage() {
       <section
         id="download"
         aria-labelledby="download-heading"
-        className="border-t border-divider bg-white"
+        className="scroll-mt-20 border-t border-divider"
       >
         <div className="mx-auto grid max-w-[1120px] items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:px-8 lg:py-20">
           <div>
@@ -200,7 +252,7 @@ export default function HomePage() {
       <section
         id="contact"
         aria-labelledby="contact-heading"
-        className="border-t border-divider"
+        className="scroll-mt-20 border-t border-divider bg-white"
       >
         <div className="mx-auto grid max-w-[1120px] gap-10 px-4 py-16 sm:px-6 lg:grid-cols-[1fr_1.1fr] lg:px-8 lg:py-20">
           <div>
@@ -233,7 +285,7 @@ export default function HomePage() {
               .
             </p>
           </div>
-          <div className="rounded-lg border border-divider bg-white p-5 sm:p-6">
+          <div className="rounded-lg border border-divider bg-canvas p-5 sm:p-6">
             <ContactForm />
           </div>
         </div>
@@ -251,10 +303,11 @@ export default function HomePage() {
             Not Medical Advice
           </h2>
           <p className="mt-3 text-sm leading-6 text-muted">
-            Plectara is a personal log with pattern spotting. Insights are
-            informational only. They do not diagnose, treat, or replace
-            professional medical care. Urgent or worsening symptoms deserve
-            professional attention—do not wait on an app insight. Read the{' '}
+            Plectara is a personal log with pattern spotting. Insights and
+            optional AI chat are informational only. They do not diagnose,
+            treat, or replace professional medical care. Urgent or worsening
+            symptoms deserve professional attention—do not wait on an app
+            insight. Read the{' '}
             <Link
               href="/legal"
               className="font-medium text-link underline-offset-2 hover:underline"

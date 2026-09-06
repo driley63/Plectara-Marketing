@@ -1,13 +1,13 @@
 # Plectara marketing site
 
-Public marketing site for [Plectara](https://lifestyleiq.io): a personal health intelligence platform.
+Public marketing site for [Plectara](https://plectara.com): a personal health intelligence platform.
 
-Brand, color, type, and logo rules follow **[PL-OS / LIQ OS](https://liq-os.lifestyleiq.io/)** (Plectara brand kit v2.0.0 and Design Language Volume 02). Do not invent one-off palette or wordmark treatments, and do not recreate the wordmark with a font.
+Brand, color, type, and logo rules follow **PL-OS** (Plectara brand kit v2.0.0 and Design Language Volume 02). Do not invent one-off palette or wordmark treatments, and do not recreate the wordmark with a font.
 
 ## What’s included
 
 - SEO metadata, sitemap, robots, and JSON-LD
-- Overview, feature list, product support, legal disclaimers, and privacy policy
+- Overview, Home Screen widgets, habits, AI-assisted chat, insights, product support, legal disclaimers, and privacy policy
 - App Store / Google Play links (empty env vars render as **Coming soon**)
 - Homepage contact form delivered to `NEXT_PUBLIC_CONTACT_EMAIL` via [FormSubmit](https://formsubmit.co)
 - Product support form delivered to `support@plectara.com`

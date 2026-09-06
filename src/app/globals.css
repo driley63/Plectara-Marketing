@@ -1,9 +1,6 @@
 @import 'tailwindcss';
 
-/* Plectara / PL-OS tokens — Brand Identity v2.0.0
-   https://liq-os.lifestyleiq.io/specs/01-brand/color-system/
-   https://liq-os.lifestyleiq.io/specs/02-design/spacing-system/
-*/
+/* Plectara / PL-OS tokens — Brand Identity v2.0.0 */
 @theme {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 

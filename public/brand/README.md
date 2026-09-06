@@ -1,6 +1,6 @@
 # Brand assets
 
-Plectara lockups, symbol, and app tile from [PL-OS / LIQ-OS](https://liq-os.lifestyleiq.io/specs/01-brand/plectara-brand-kit/) (brand kit v2.0.0, approved 2026-09-04). Do not recreate the wordmark with a font.
+Plectara lockups, symbol, and app tile from the PL-OS brand kit (v2.0.0, approved 2026-09-04). Do not recreate the wordmark with a font.
 
 | File | Use |
 | --- | --- |

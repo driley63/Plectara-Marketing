@@ -25,6 +25,7 @@ export const metadata: Metadata = {
     'personal health intelligence',
     'health diary',
     'habit tracking',
+    'home screen widget',
     'health patterns',
     'wellness',
   ],
