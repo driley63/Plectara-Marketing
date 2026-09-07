@@ -14,7 +14,8 @@ const sizes = {
 
 /**
  * Plectara horizontal lockup (woven person + outlined wordmark).
- * Light: ink lettering on ivory/white. Reversed: white lockup on ink.
+ * Full color always keeps the jade head and original strand colors.
+ * Light: ink lettering on ivory/white. Reversed: white lettering on ink.
  * Do not recreate the wordmark with a font.
  */
 export function BrandMark({
@@ -28,14 +29,16 @@ export function BrandMark({
     <Image
       src={
         reversed
-          ? '/brand/plectara-horizontal-reversed.png'
-          : '/brand/plectara-horizontal.png'
+          ? '/brand/plectara-horizontal-reversed.svg'
+          : '/brand/plectara-horizontal.svg'
       }
       alt="Plectara"
       width={width}
       height={height}
-      className="h-auto w-auto"
+      className="h-auto"
+      style={{ width }}
       priority={priority}
+      unoptimized
     />
   );
 }

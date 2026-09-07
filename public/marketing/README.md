@@ -13,3 +13,5 @@
 | `widget-large.png` | Large Home Screen widget |
 
 Device PNGs include the phone bezel. Drop a file into this folder using the filename above; the homepage picks it up automatically.
+
+PNG screenshots must retain their RGBA alpha channel, including partially transparent pixels along curved edges. Do not flatten them, threshold their alpha, or bake a transparency checkerboard into the artwork. Device edge smoothing changes only a two-pixel band around the exterior; the screen content and interior bezel remain unchanged.

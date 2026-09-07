@@ -1,6 +1,6 @@
 # Brand assets
 
-Plectara lockups, symbol, and app tile from the PL-OS brand kit (v2.0.0, approved 2026-09-04). Do not recreate the wordmark with a font.
+Plectara lockups, symbol, and app tile from the PL-OS brand kit (v2.1.0, jade-head standard approved 2026-09-07). Do not recreate the wordmark with a font.
 
 | File | Use |
 | --- | --- |
@@ -13,4 +13,8 @@ Plectara lockups, symbol, and app tile from the PL-OS brand kit (v2.0.0, approve
 | `plectara-symbol-white.png` | Dark-surface symbol if needed |
 | `favicon.ico` | Legacy favicon |
 
-Use ink lettering on ivory/white and the reversed lockup on ink. Keep at least 140 px width for the horizontal digital lockup.
+Every full-color logo uses a jade head (`#76B7A5`) and the original strand colors. Use ink (`#192D38`) lettering on ivory/white and white (`#FFFFFF`) lettering on ink. The header and footer use the approved SVG masters to preserve sharp outlines and transparency. Keep at least 140 px width for the horizontal digital lockup.
+
+Monochrome artwork uses one color for the entire figure and lettering: ink on light backgrounds or white on dark backgrounds. Preserve the supplied lettering shapes, spacing, capitalization, and proportions; Inter is for supporting copy only. The app icon in `src/app/icon.png` is the approved 512 px Plectara tile.
+
+Current standards and downloadable masters: [PL-OS brand kit](https://pl-os.plectara.com/specs/01-brand/plectara-brand-kit/).
