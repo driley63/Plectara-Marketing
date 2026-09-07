@@ -3,8 +3,8 @@ import Image from 'next/image';
 const aspects = {
   phone: 'aspect-[498/1024]',
   'widget-small': 'aspect-square',
-  'widget-medium': 'aspect-[338/158]',
-  'widget-large': 'aspect-[338/354]',
+  'widget-medium': 'aspect-[1024/482]',
+  'widget-large': 'aspect-[1024/899]',
 } as const;
 
 const widths = {
