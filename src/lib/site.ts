@@ -4,7 +4,7 @@
  */
 export const site = {
   name: 'Plectara',
-  tagline: 'Translating daily habits into a plan towards optimal health.',
+  tagline: 'A healthier whole.',
   description:
     'Plectara is a personal health intelligence platform that turns everyday habits into understandable patterns—so you can act with more clarity. Capture from the Home Screen, learn routines as habits, and ask about your patterns. Not a diagnostic product.',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://plectara.com',
@@ -19,50 +19,50 @@ export const site = {
 export const pillars = [
   {
     title: 'Capture',
-    body: 'Record what happened with the least interruption possible—from the Home Screen widget or a few taps in the app.',
+    body: 'Bring the details of your day together. Record meals, sleep, movement, symptoms, and more, with room for what matters to you.',
   },
   {
     title: 'Habits',
-    body: 'When you repeat a log, Plectara can learn it and surface it when it is useful. The product should fit your routine.',
+    body: 'Let familiar routines make logging easier. Plectara learns what you repeat and puts useful shortcuts within reach.',
   },
   {
     title: 'Insights',
-    body: 'See how habits, symptoms, and routines relate—then ask about those findings in a bounded, optional chat.',
+    body: 'Explore connections between your habits and how you feel, with clear explanations and practical next steps to consider.',
   },
 ] as const;
 
 export const features = [
   {
-    title: 'Home Screen Widgets',
-    body: 'Log sleep, meals, movement, and the things you repeat from the Home Screen—without opening Plectara first. The widget is for capture. Scores, trends, and interpretation stay in the app.',
+    title: 'Log from your Home Screen',
+    body: 'Keep everyday capture a tap away. Record familiar activities or jump straight into a new entry, then get back to your day.',
   },
   {
-    title: 'Habits That Fit Your Life',
-    body: 'Repeated logs can become learned habits. Plectara may promote them on the widget and in Quick Log when they are likely to help—without making you design every shortcut first. You can pin, hide, rename, or remove what it learned.',
+    title: 'Shortcuts that learn your routine',
+    body: 'The things you do regularly become easier to record. Plectara learns repeated activities and suggests useful shortcuts, with control to pin, rename, hide, or remove them.',
   },
   {
-    title: 'Ask About Your Patterns',
+    title: 'Explore your patterns in conversation',
     id: 'chat',
     ai: true,
-    body: 'A bounded chat over your recent findings: what the diary is showing, what to log next, and how habits may relate. It does not diagnose, prescribe, or replace Insights. Chat is optional, AI-labeled, and separately consented.',
+    body: 'Ask questions about what you’re noticing. Optional AI-assisted chat helps you explore your recent insights and consider what to record next.',
   },
   {
-    title: 'Pattern Insights',
+    title: 'See what may be connected',
     id: 'insights',
     ai: true,
-    body: 'Plectara looks across your diary to surface correlations and practical next steps. Insights are informational only. They do not diagnose, treat, or replace professional care.',
+    body: 'Explore relationships between your habits and how you feel. Plectara brings patterns into focus, with explanations and practical next steps to consider.',
   },
   {
-    title: 'Daily Capture',
-    body: 'Log meals, sleep, activity, vitals, symptoms, and bowel movements in a few taps—or from Quick Log. One tap can save a repeated action; guided capture opens only when a detail is actually needed.',
+    title: 'Capture what matters to you',
+    body: 'Keep meals, sleep, movement, symptoms, vitals, and more in one daily record. Build a picture that reflects your life and the details you want to understand.',
   },
   {
-    title: 'Medication and Supplement Schedule',
-    body: 'Keep names, dosages, and typical times in one reusable schedule. Optional reminders help you stay consistent without logging every dose by hand.',
+    title: 'Keep medications and supplements organized',
+    body: 'Save names, dosages, and usual times in one reusable schedule. Optional reminders help you keep up with your routine.',
   },
   {
-    title: 'A Timeline You Can Review',
-    body: 'See today at a glance, scan a 14-day snapshot, and filter the full timeline when you want to look back before a visit or a change in routine.',
+    title: 'Look back with perspective',
+    body: 'Review your day, explore recent weeks, or revisit an entry on your timeline. Bring useful context to a change in routine or a conversation about your health.',
   },
 ] as const;
 

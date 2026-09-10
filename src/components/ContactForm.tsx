@@ -3,11 +3,15 @@ import { site } from '@/lib/site';
 type ContactFormProps = {
   subject?: string;
   toEmail?: string;
+  submitLabel?: string;
+  privacyNote?: string;
 };
 
 export function ContactForm({
   subject = 'Plectara website inquiry',
   toEmail = site.contactEmail,
+  submitLabel = 'Send message',
+  privacyNote = `Messages are sent to ${toEmail}. Do not include sensitive health information. See the`,
 }: ContactFormProps) {
   const action = `https://formsubmit.co/${encodeURIComponent(toEmail)}`;
 
@@ -67,8 +71,7 @@ export function ContactForm({
       </div>
 
       <p className="text-sm text-muted">
-        Messages are sent to {toEmail}. Do not include sensitive health
-        information. See the{' '}
+        {privacyNote}{' '}
         <a href="/privacy" className="font-medium text-link underline-offset-2 hover:underline">
           privacy policy
         </a>
@@ -79,7 +82,7 @@ export function ContactForm({
         type="submit"
         className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
       >
-        Send message
+        {submitLabel}
       </button>
     </form>
   );

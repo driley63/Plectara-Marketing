@@ -37,21 +37,20 @@ export default function HomePage() {
               Personal health intelligence
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-[3.25rem] lg:leading-[1.12]">
-              Translating Daily Habits into a Plan Towards Optimal Health.
+              Your daily habits. A clearer picture of you.
             </h1>
             <p className="mt-6 max-w-[560px] text-lg leading-8 text-white/85">
-              Plectara helps you understand how daily habits affect
-              health—then turns those signals into a plan you can actually
-              follow. Capture from the Home Screen in a tap. The app is for
-              understanding: patterns, habits, and optional AI that stays
-              honest about its limits.
+              What you eat, how you sleep, when you move, and how you feel are all part of
+              your story. Plectara brings those everyday details together,
+              helping you recognize patterns and take practical steps toward a
+              healthier life.
             </p>
             <div className="mt-8">
               <Link
-                href="#download"
+                href="#overview"
                 className="inline-flex h-12 min-w-11 items-center justify-center rounded-md bg-brand px-6 text-base font-semibold text-white transition-colors duration-[120ms] hover:bg-brand-hover"
               >
-                Get the App
+                Explore Plectara
               </Link>
             </div>
           </div>
@@ -76,19 +75,17 @@ export default function HomePage() {
               id="overview-heading"
               className="text-3xl font-semibold tracking-tight text-deep-navy"
             >
-              Built Around Daily Life
+              Built around the way you live.
             </h2>
             <p className="mt-5 max-w-[760px] text-base leading-7 text-muted">
-              Most health apps ask you to track more. Plectara asks you to
-              understand more. Log the parts of your day that matter—meals,
-              movement, sleep, symptoms, vitals, medications—and the app looks
-              for patterns you can use.
+              A restless night. An afternoon slump. A day when you feel more like yourself.
+              Looking at these moments alongside your meals, movement, and
+              routines can help you understand what may be connected.
             </p>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-              Capture feeds the system. Habits personalize it. Insights deliver
-              the value. AI is the engine, not the identity: it can explain
-              findings and suggest what to log next, but it does not diagnose
-              conditions, and it will not pretend otherwise.
+              Start with what matters to you. As Plectara learns your routines, familiar
+              things become easier to record—giving you more context to
+              understand your patterns and decide what to try next.
             </p>
             <ul className="mt-10 grid gap-8 sm:grid-cols-3">
               {pillars.map((item) => (
@@ -119,27 +116,26 @@ export default function HomePage() {
             id="widgets-heading"
             className="text-3xl font-semibold tracking-tight text-deep-navy"
           >
-            Capture From Your Home Screen
+            Capture the moment. Carry on with your day.
           </h2>
           <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-            The widget is for capture. The app is for understanding. Log sleep,
-            meals, movement, and the things you repeat—without opening Plectara
-            first. Completing the day gets easier; the diary stays complete
-            enough to learn from.
+            A meal, a walk, a good night’s sleep. Plectara’s widgets make it easy to
+            record everyday moments from your Home Screen, so the little
+            details stay part of the bigger picture.
           </p>
           <ul className="mt-8 grid gap-6 sm:grid-cols-3">
             {[
               {
-                title: 'One Tap When It Counts',
-                body: 'Repeated actions can save immediately. If a detail is required, the widget opens the exact capture screen—not a maze of tabs.',
+                title: 'Familiar moments, fewer steps',
+                body: 'Save a repeated activity with a tap, or go straight to the details you need. Spend less time logging and more time living.',
               },
               {
-                title: 'Habits Show Up When Useful',
-                body: 'Learned habits and favorites can appear as suggestions at the times you actually use them, without turning the widget into a dashboard.',
+                title: 'Your routines, ready when you are',
+                body: 'Keep favorites close and find suggestions based on your familiar habits, right when they’re likely to be useful.',
               },
               {
-                title: 'Glanceable, Not Exposed',
-                body: 'The Home Screen shows capture actions—not scores, trends, or interpretation. Those stay in the app, where you choose to look.',
+                title: 'Understanding, on your terms',
+                body: 'Your widget keeps everyday logging handy. Open Plectara when you’re ready to explore your patterns and insights.',
               },
             ].map((item) => (
               <li key={item.title}>
@@ -152,12 +148,11 @@ export default function HomePage() {
           </ul>
           <div className="mt-14 border-t border-divider pt-12">
             <h3 className="text-2xl font-semibold tracking-tight text-deep-navy">
-              Three Sizes, One Job
+              Find your fit.
             </h3>
             <p className="mt-3 max-w-[640px] text-base leading-7 text-muted">
-              Log a meal, a walk, or sleep from the Home Screen in a tap.
-              Habits and favorites surface when they help—so capture stays
-              quick and the diary stays complete.
+              Choose from three sizes to suit your Home Screen and your routine. Each keeps
+              everyday capture within easy reach.
             </p>
             <div className="mt-10 flex flex-wrap items-end justify-center gap-8 lg:justify-start">
               {widgetShots.map((shot) => (
@@ -190,12 +185,12 @@ export default function HomePage() {
                 id="features-heading"
                 className="text-3xl font-semibold tracking-tight text-deep-navy"
               >
-                What You Can Do in Plectara
+                A fuller picture. A clearer next step.
               </h2>
               <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-                A focused health diary for iOS and Android. The features below
-                exist to make daily capture easier and the picture of your
-                health clearer. Log what matters; skip the rest.
+                From a quick daily log to a closer look at a recurring pattern, Plectara helps
+                you bring your experiences together and explore what matters
+                to your well-being.
               </p>
               <ul className="mt-8 grid gap-6 sm:grid-cols-2">
                 {features.map((feature) => (
@@ -237,12 +232,12 @@ export default function HomePage() {
               id="download-heading"
               className="text-3xl font-semibold tracking-tight text-deep-navy"
             >
-              Get Plectara
+              Your next step toward a healthier whole.
             </h2>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-              App Store and Google Play listings will appear here when the app
-              is ready for public download. Official store badges are shown
-              below; links will go live with the listings.
+              Get to know your habits, discover your patterns, and find a way forward that
+              fits your life. Plectara is coming soon to the App Store and
+              Google Play.
             </p>
             <div className="mt-8">
               <StoreLinks />
@@ -274,22 +269,24 @@ export default function HomePage() {
               id="contact-heading"
               className="text-3xl font-semibold tracking-tight text-deep-navy"
             >
-              Contact
+              Let’s connect.
             </h2>
             <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-              Questions about Plectara, press, or partnership? Send a
-              message. For help with the app, use{' '}
+              Have a question about Plectara, a press inquiry, or an idea for
+              working together? We’d like to hear from you.
+            </p>
+            <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
+              For help with the app, visit{' '}
               <Link
                 href="/support"
                 className="font-medium text-link underline-offset-2 hover:underline"
               >
                 product support
               </Link>
-              . These forms are for general inquiries, not medical emergencies
-              or clinical advice.
+              .
             </p>
             <p className="mt-4 text-sm text-muted">
-              You can also email{' '}
+              Prefer email? Reach us at{' '}
               <a
                 href={`mailto:${site.contactEmail}`}
                 className="font-medium text-link underline-offset-2 hover:underline"
@@ -300,7 +297,10 @@ export default function HomePage() {
             </p>
           </div>
           <div className="rounded-lg border border-divider bg-canvas p-5 sm:p-6">
-            <ContactForm />
+            <ContactForm
+              submitLabel="Let’s talk!"
+              privacyNote="Your message goes to the Plectara team. Please leave out sensitive health information. See our"
+            />
           </div>
         </div>
       </section>
@@ -314,14 +314,17 @@ export default function HomePage() {
             id="disclaimer-heading"
             className="text-lg font-semibold text-deep-navy"
           >
-            Not Medical Advice
+            Not medical advice
           </h2>
           <p className="mt-3 text-sm leading-6 text-muted">
-            Plectara is a personal log with pattern spotting. Insights and
-            optional AI chat are informational only. They do not diagnose,
-            treat, or replace professional medical care. Urgent or worsening
-            symptoms deserve professional attention—do not wait on an app
-            insight. Read the{' '}
+            Plectara helps you understand the connections between your daily
+            habits and how you feel. Its insights and optional AI chat are
+            informational only. They do not diagnose, treat, or replace
+            professional medical care. For urgent or worsening symptoms, seek
+            professional attention.
+          </p>
+          <p className="mt-3 text-sm leading-6 text-muted">
+            Read our{' '}
             <Link
               href="/legal"
               className="font-medium text-link underline-offset-2 hover:underline"
