@@ -61,6 +61,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/terms" className="hover:text-white">
+                Terms
+              </Link>
+            </li>
+            <li>
               <a href={`mailto:${site.contactEmail}`} className="hover:text-white">
                 {site.contactEmail}
               </a>

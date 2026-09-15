@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { site } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Legal Disclaimers',
@@ -91,10 +92,13 @@ export default function LegalPage() {
             <Link href="/support" className="font-medium text-link hover:underline">
               product support
             </Link>
-            , the{' '}
-            <Link href="/#contact" className="font-medium text-link hover:underline">
-              contact form
-            </Link>
+            , email{' '}
+            <a
+              href={`mailto:${site.supportEmail}`}
+              className="font-medium text-link hover:underline"
+            >
+              {site.supportEmail}
+            </a>
             , or the{' '}
             <Link href="/privacy" className="font-medium text-link hover:underline">
               privacy policy

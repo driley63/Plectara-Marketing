@@ -7,10 +7,9 @@ Brand, color, type, and logo rules follow **PL-OS** (Plectara brand kit v2.0.0 a
 ## What’s included
 
 - SEO metadata, sitemap, robots, and JSON-LD
-- Overview, Home Screen widgets, habits, AI-assisted chat, insights, product support, legal disclaimers, and privacy policy
+- Overview, Home Screen widgets, habits, AI-assisted chat, insights, product support, legal disclaimers, privacy policy, and terms of use
 - App Store / Google Play links (empty env vars render as **Coming soon**)
-- Homepage contact form delivered to `NEXT_PUBLIC_CONTACT_EMAIL` via [FormSubmit](https://formsubmit.co)
-- Product support form delivered to `support@plectara.com`
+- Contact and product support use mailto links (`info@plectara.com` / `support@plectara.com`). Do not add third-party form hosts such as FormSubmit.
 
 ## Local development
 
@@ -26,12 +25,10 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Variable | Purpose |
 | --- | --- |
-| `NEXT_PUBLIC_SITE_URL` | Canonical origin for sitemap, Open Graph, and form redirect |
-| `NEXT_PUBLIC_CONTACT_EMAIL` | Inbox for the homepage contact form (currently `info@plectara.com`) |
+| `NEXT_PUBLIC_SITE_URL` | Canonical origin for sitemap, Open Graph, and mailto links |
+| `NEXT_PUBLIC_CONTACT_EMAIL` | Inbox for homepage inquiries (currently `info@plectara.com`) |
 | `NEXT_PUBLIC_APP_STORE_URL` | iOS listing. Leave blank to stub |
 | `NEXT_PUBLIC_PLAY_STORE_URL` | Android listing. Leave blank to stub |
-
-The first FormSubmit delivery to a new address requires an email confirmation from that inbox.
 
 ## Brand assets
 

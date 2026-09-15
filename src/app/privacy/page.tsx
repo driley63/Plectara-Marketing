@@ -5,7 +5,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = {
   title: 'Privacy Policy',
   description:
-    'How Plectara handles diary data, required accounts and online sync, Apple Health and Health Connect, and AI insights.',
+    'How Plectara handles diary data, accounts, Apple Health and Health Connect, and optional OpenAI explanations.',
   alternates: { canonical: '/privacy' },
 };
 
@@ -20,17 +20,16 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 6 September 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 15 September 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
           This policy describes how Plectara handles information in the app and
           on this website. It is written for users in the United States and is
           also intended to meet the spirit of the EU GDPR for health data.
-          Using Plectara requires an account, and your diary syncs to our
-          servers as part of the service. Health imports and optional cloud AI
-          still have their own consent. Turning those on is separate from
-          sync.
+          Using Plectara requires an account. This version does not sync your
+          diary to Plectara servers. Health import and optional cloud AI each
+          require their own permission.
         </p>
 
         <section>
@@ -38,7 +37,8 @@ export default function PrivacyPage() {
           <p className="mt-3">
             Plectara is a personal health diary and pattern tool. It is not a
             medical device and does not diagnose or treat conditions. Insights
-            and optional AI are informational only.
+            and optional AI are informational only. We do not claim ISO 27001,
+            SOC 2, or HIPAA certification.
           </p>
         </section>
 
@@ -96,27 +96,22 @@ export default function PrivacyPage() {
             Device unlock such as Face ID or the device passcode, if offered,
             stays on the device. Biometric templates are not sent to Plectara
             or the sign-in provider. They only unlock credentials already on
-            the phone.
+            the phone. Signing in does not sync your diary in this version.
           </p>
         </section>
 
         <section>
-          <h2 className="text-xl font-semibold text-deep-navy">Online Sync</h2>
+          <h2 className="text-xl font-semibold text-deep-navy">
+            Online Backup and Cloud SQL (Not in This Version)
+          </h2>
           <p className="mt-3">
-            Online sync is part of the service. It is not optional. Diary
-            entries, preferences, habits, and related health records under your
-            account are sent to Plectara servers so the app can back up,
-            restore, and work across devices. That includes rows imported from
-            Apple Health or Health Connect that became diary entries. Synced
-            health data is linked to your account.
-          </p>
-          <p className="mt-3">
-            We also collect this synced diary so we can later run de-identified
-            or aggregated analysis — for example to improve Insights and the
-            product. Those analysis sets are not used to advertise to you or
-            sold as health data. Until a record is de-identified or aggregated,
-            it remains linked to your account. Meal photos stay on the device
-            unless we later add photo backup and update this policy.
+            This version does not sync your diary to Plectara servers. Online
+            backup is optional and is not required to use the app. A future
+            cloud backup, after a separate, explicit, revocable consent, may
+            store diary records in production Google Cloud SQL so you can
+            restore or use another device. Meal photos stay on the device
+            unless we later add photo backup and update this policy. Until you
+            consent to that backup, diary data stays on this device.
           </p>
         </section>
 
@@ -150,29 +145,39 @@ export default function PrivacyPage() {
             Insights and AI
           </h2>
           <p className="mt-3">
-            Pattern Insights are computed from your diary. The diary syncs with
-            your account. Insights are not diagnoses. Optional cloud AI, if you
-            consent, is the only time structured findings are sent to a
-            language-model provider.
+            Pattern Insights are computed on this device from your diary.
+            Insights are not diagnoses. Optional cloud AI is off until you
+            allow it on a dedicated in-app permission screen. The medical
+            disclaimer does not grant this permission.
           </p>
           <p className="mt-3">
-            Optional live cloud AI (Settings → AI insights) is off by default.
-            A separate consent is required. When both live AI and consent are
-            on, Plectara may send structured on-device findings — codes,
-            labels, metrics, and a care-urgency label — to a Plectara service
-            so a contracted language-model provider can write a plain-language
-            explanation. That explanation is labeled AI-assisted. We do not
-            send your full diary, notes, or photos for this.
+            When you tap Allow, Plectara may send structured on-device findings
+            — codes, labels (which may include names you gave meals,
+            activities, or symptoms), metrics, a care-urgency label, and the
+            local summary — to Plectara’s cloud service (Google Cloud). That
+            service then sends the same findings to OpenAI, a third-party AI
+            provider, so OpenAI can write a plain-language explanation at most
+            once per day when you open the app. AI chat about recent findings
+            uses the same findings-only context and also sends the question you
+            type and recent chat turns. We do not send your full diary, notes,
+            photos, or password.
           </p>
           <p className="mt-3">
-            Optional AI chat about recent findings has its own consent, also
-            off by default. It uses the same findings-only context. Chat is not
-            a clinician, does not replace Insights, and does not diagnose or
-            prescribe. The medical disclaimer is separate and does not grant AI
-            consent. You can turn live AI, narrative consent, and chat consent
-            off at any time. Revoking chat consent clears the on-device thread.
-            We do not keep long-lived chat transcripts on our servers for
-            product history.
+            Those explanations are labeled AI-assisted. On-device Insights
+            still run if you tap Don’t Allow. You can change explanation and
+            chat later in Preferences → AI insights. Delete Account removes
+            on-device AI artifacts and clears the stored permission. OpenAI
+            processes this data as our subprocessor under its API terms. We do
+            not use it for advertising or sell it. Under OpenAI’s current API
+            data-usage policy, API inputs are not used to train OpenAI models.
+            OpenAI’s privacy policy is at{' '}
+            <a
+              href="https://openai.com/policies/privacy-policy"
+              className="font-medium text-link underline-offset-2 hover:underline"
+            >
+              openai.com/policies/privacy-policy
+            </a>
+            .
           </p>
         </section>
 
@@ -201,8 +206,8 @@ export default function PrivacyPage() {
             Imported rows become Plectara diary entries. They count toward
             logging, streaks, and insights the same as entries you type in.
             They are labeled so you can see they came from Apple Health or
-            Health Connect. Imported rows are included in the synced diary
-            under your account.
+            Health Connect. Connecting is optional and skippable. Imported rows
+            stay on this device in this version.
           </p>
         </section>
 
@@ -210,10 +215,12 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold text-deep-navy">Consent</h2>
           <p className="mt-3">
             Health import, live cloud AI, and AI chat are each optional.
-            Account and online sync are required to use Plectara. You can skip
-            Health during onboarding and change Health and AI later in
-            Preferences. Disconnecting Health stops new imports. Copies already
-            in Plectara stay until you delete those entries or close your
+            Account sign-in is required to use Plectara; diary sync is not part
+            of this version. You can skip Health during onboarding and change
+            Health and AI later in Preferences. Cloud AI asks Allow or Don’t
+            Allow on a dedicated screen that names OpenAI before any findings
+            are sent. Disconnecting Health stops new imports. Copies already in
+            Plectara stay until you delete those entries or close your
             account. After disconnect we will not query Apple Health or Health
             Connect again. You can also revoke Plectara in the Health or Health
             Connect apps on your device.
@@ -225,17 +232,16 @@ export default function PrivacyPage() {
             Analytics, Diagnostics, and This Website
           </h2>
           <p className="mt-3">
-            Analytics and diagnostic logs, if enabled, must not include diary
-            contents, medication names, notes, photos, or similar health free
-            text — only operational codes and similar non-content metadata. We
-            do not sell health data. We do not use Apple Health, Health
-            Connect, or diary data for advertising.
+            Analytics and diagnostic logs, if enabled, may send operational
+            event names and coded parameters to Firebase Analytics. They must
+            not include diary contents, medication names, notes, photos, or
+            similar health free text. We do not sell health data. We do not
+            use Apple Health, Health Connect, or diary data for advertising.
           </p>
           <p className="mt-3">
-            If you use a contact or support form on this website, we receive
-            the name, email, and message you submit, via FormSubmit, so we can
-            reply. Do not send sensitive health information through those
-            forms.
+            If you email support from this website, we receive the address and
+            message you send so we can reply. Do not send sensitive health
+            information.
           </p>
         </section>
 
@@ -245,25 +251,22 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-3">
             We use processors only to run Plectara: Auth0 for sign-in; Google
-            Cloud to host the API and synced data; a contracted
-            language-model provider for optional AI explanations and chat;
-            Apple and Google for Health platforms and Sign In; Firebase for
-            optional analytics, distribution, or abuse checks that do not
-            include diary contents; and FormSubmit for website messages. They
-            are not given your data to market their own products to you.
+            Cloud to host the API; OpenAI for optional AI explanations and chat
+            after you allow it; Apple and Google for Health platforms and Sign
+            In; and Firebase for optional analytics, distribution, or abuse
+            checks that do not include diary contents. They are not given your
+            data to market their own products to you.
           </p>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Retention</h2>
           <p className="mt-3">
-            On-device data stays until you delete entries or uninstall the app.
-            Synced account data stays until you delete those records or close
-            the account. After de-identification or aggregation for product
-            analysis, we do not re-attach those analysis sets to your account.
-            Optional AI requests are processed to produce a response; we keep
-            privacy-safe operational logs (route, outcome, timing), not full
-            findings text or chat messages, for product history. Website
+            On-device data stays until you delete entries, use Delete Account,
+            or uninstall the app. This version does not keep a synced diary
+            copy. Optional AI requests are processed to produce a response; we
+            keep privacy-safe operational logs (route, outcome, timing), not
+            full findings text or chat messages, for product history. Website
             messages are kept as needed to respond.
           </p>
         </section>
@@ -271,19 +274,21 @@ export default function PrivacyPage() {
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Your Rights</h2>
           <p className="mt-3">
-            You can edit or delete individual diary entries in the app.
-            Uninstalling Plectara removes local data on that device. It does
-            not by itself erase your synced account. Email{' '}
+            You can edit or delete individual diary entries in the app. Delete
+            Account (Preferences → Account) removes diary data, meal photos,
+            the Home Screen widget snapshot, health-import connection,
+            on-device AI artifacts, and reminder schedules on this device.
+            Uninstalling Plectara also removes local data on that device. Email{' '}
             <a
               href={`mailto:${site.supportEmail}`}
               className="font-medium text-link underline-offset-2 hover:underline"
             >
               {site.supportEmail}
             </a>{' '}
-            to request access, export, or erasure of identifiable data we hold,
-            including GDPR requests. We will also delete or de-identify
-            associated AI artifacts we control. Already aggregated analysis
-            sets are not re-attached to your account.
+            to request access, export, or erasure of personal data we hold
+            (including Auth0 account identifiers), including GDPR requests.
+            After cloud backup ships, the same email path will cover
+            identifiable Cloud SQL rows linked to your account.
           </p>
         </section>
 

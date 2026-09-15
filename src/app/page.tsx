@@ -298,8 +298,8 @@ export default function HomePage() {
           </div>
           <div className="rounded-lg border border-divider bg-canvas p-5 sm:p-6">
             <ContactForm
-              submitLabel="Let’s talk!"
-              privacyNote="Your message goes to the Plectara team. Please leave out sensitive health information. See our"
+              submitLabel="Let’s Talk!"
+              privacyNote="Email the Plectara team. Please leave out sensitive health information. See our"
             />
           </div>
         </div>
