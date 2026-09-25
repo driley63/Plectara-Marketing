@@ -20,7 +20,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 15 September 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 25 September 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -68,11 +68,16 @@ export default function PrivacyPage() {
             </li>
           </ul>
           <p className="mt-3">
-            The on-device health database is encrypted at rest. The encryption
-            key is stored in the platform secure store (iOS Keychain / Android
-            Keystore). Sensitive health-adjacent preferences also use that
-            store. Meal photos on disk and minimized Home Screen widget
-            snapshots are not inside the encrypted database.
+            The on-device health database is encrypted at rest. Optional photos
+            you attach to saved meals are encrypted at rest in the app sandbox.
+            Those encryption keys are stored in the platform secure store (iOS
+            Keychain / Android Keystore). Sensitive health-adjacent preferences
+            also use that store. The encrypted diary and saved-meal photos are
+            excluded from iCloud Backup on iOS and from Android Auto Backup and
+            device-to-device transfer. Minimized Home Screen widget snapshots,
+            including a small decoded meal thumbnail when a saved meal is
+            pinned, are not inside the encrypted database and can still be
+            included in device backup.
           </p>
         </section>
 
@@ -275,18 +280,20 @@ export default function PrivacyPage() {
           <h2 className="text-xl font-semibold text-deep-navy">Your Rights</h2>
           <p className="mt-3">
             You can edit or delete individual diary entries in the app. Delete
-            Account (Preferences → Account) removes diary data, meal photos,
-            the Home Screen widget snapshot, health-import connection,
-            on-device AI artifacts, and reminder schedules on this device.
-            Uninstalling Plectara also removes local data on that device. Email{' '}
+            Account (Preferences → Account) deletes the Auth0 sign-in account
+            and removes diary data, meal photos, the Home Screen widget
+            snapshot, health-import connection, on-device AI artifacts, and
+            reminder schedules on this device. The same email can be used to
+            create a new account. If deletion cannot reach Auth0, the app does
+            not say the account was deleted. Email{' '}
             <a
               href={`mailto:${site.supportEmail}`}
               className="font-medium text-link underline-offset-2 hover:underline"
             >
               {site.supportEmail}
             </a>{' '}
-            to request access, export, or erasure of personal data we hold
-            (including Auth0 account identifiers), including GDPR requests.
+            to request access or export of personal data we hold, including
+            GDPR requests, or if Delete Account could not reach Auth0.
             After cloud backup ships, the same email path will cover
             identifiable Cloud SQL rows linked to your account.
           </p>
