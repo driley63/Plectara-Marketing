@@ -1,13 +1,14 @@
+import { pageMetadata } from '@/lib/metadata';
 import { site } from '@/lib/site';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Product Support',
   description:
     'Get help with Plectara: how to reach us, common app questions, and how to manage your diary and privacy controls.',
-  alternates: { canonical: '/support' },
-};
+  path: '/support',
+});
 
 const faqs = [
   {

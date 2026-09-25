@@ -1,13 +1,14 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import { pageMetadata } from '@/lib/metadata';
 import { site } from '@/lib/site';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
   title: 'Legal Disclaimers',
   description:
     'Plectara legal disclaimers: not medical advice, not a diagnostic product, and not a substitute for professional care.',
-  alternates: { canonical: '/legal' },
-};
+  path: '/legal',
+});
 
 export default function LegalPage() {
   return (

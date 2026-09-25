@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import { Inter } from 'next/font/google';
 import { Footer } from '@/components/Footer';
 import { Header } from '@/components/Header';
+import { socialCard } from '@/lib/metadata';
 import { site } from '@/lib/site';
 import './globals.css';
 
@@ -39,20 +40,13 @@ export const metadata: Metadata = {
     siteName: site.name,
     title: `${site.name} — Personal Health Intelligence`,
     description: site.description,
-    images: [
-      {
-        url: '/brand/plectara-social-card.png',
-        width: 1200,
-        height: 630,
-        alt: 'Plectara',
-      },
-    ],
+    images: [socialCard],
   },
   twitter: {
     card: 'summary_large_image',
     title: `${site.name} — Personal Health Intelligence`,
     description: site.description,
-    images: ['/brand/plectara-social-card.png'],
+    images: [socialCard.url],
   },
   robots: {
     index: true,
