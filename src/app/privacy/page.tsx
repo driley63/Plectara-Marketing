@@ -158,15 +158,20 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-3">
             When you tap Allow, Plectara may send structured on-device findings
-            — codes, labels (which may include names you gave meals,
-            activities, or symptoms), metrics, a care-urgency label, and the
-            local summary — to Plectara’s cloud service (Google Cloud). That
+            — codes, labels, metrics, a care-urgency label, and the local
+            summary — to Plectara’s cloud service (Google Cloud). Before
+            anything leaves your device, names you gave meals, activities,
+            symptoms, medications, doses, and conditions are replaced with
+            generic placeholders such as “Food 1” or “Symptom 2”; the app swaps
+            the real names back in on your device when it shows the reply. That
             service then sends the same findings to OpenAI, a third-party AI
             provider, so OpenAI can write a plain-language explanation at most
             once per day when you open the app. AI chat about recent findings
             uses the same findings-only context and also sends the question you
-            type and recent chat turns. We do not send your full diary, notes,
-            photos, or password.
+            type and recent chat turns, with names Plectara recognizes replaced
+            the same way. Words you type that Plectara does not recognize as one
+            of your logged names are sent as written. We do not send your full
+            diary, notes, photos, or password.
           </p>
           <p className="mt-3">
             Those explanations are labeled AI-assisted. On-device Insights
