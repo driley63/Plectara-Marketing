@@ -267,36 +267,74 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Retention</h2>
-          <p className="mt-3">
-            On-device data stays until you delete entries, use Delete Account,
-            or uninstall the app. This version does not keep a synced diary
-            copy. Optional AI requests are processed to produce a response; we
-            keep privacy-safe operational logs (route, outcome, timing), not
-            full findings text or chat messages, for product history. Website
-            messages are kept as needed to respond.
-          </p>
+          <ul className="mt-3 list-disc space-y-2 pl-6">
+            <li>
+              Diary data, meal photos, profile, and settings stay on your device
+              until you delete them, delete your account, or uninstall the app.
+              This version does not keep a synced diary copy.
+            </li>
+            <li>
+              Your sign-in account (Auth0), the daily AI usage counters, and a
+              record of your AI sharing choices (on or off, and which consent
+              version) on our cloud service are kept until you delete your
+              account. The cloud service refuses AI requests unless that record
+              shows you allowed sharing.
+            </li>
+            <li>
+              Our cloud service keeps request logs (route, outcome, timing),
+              which do not contain diary content, findings text, or chat
+              messages, for about 30 days.
+            </li>
+            <li>
+              If you allow AI explanation or chat, OpenAI may keep the findings
+              and messages it receives for up to 30 days for abuse monitoring
+              under its API data policy, then deletes them.
+            </li>
+            <li>
+              An exported file is kept wherever you choose to save or send it.
+              Plectara removes its temporary copy after sharing, or the next
+              time the app opens.
+            </li>
+            <li>Website messages are kept as needed to respond.</li>
+          </ul>
         </section>
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">Your Rights</h2>
           <p className="mt-3">
-            You can edit or delete individual diary entries in the app. Delete
-            Account (Preferences → Account) deletes the Auth0 sign-in account
-            and removes diary data, meal photos, the Home Screen widget
-            snapshot, health-import connection, on-device AI artifacts, and
-            reminder schedules on this device. The same email can be used to
-            create a new account. If deletion cannot reach Auth0, the app does
-            not say the account was deleted. Email{' '}
+            You can edit or delete individual diary entries in the app.
+          </p>
+          <p className="mt-3">
+            <strong>Export:</strong> Export My Data (Preferences → Account)
+            creates one JSON file with your diary entries, profile, medications,
+            saved meals and activities, habits, AI chat, consents, and settings,
+            and opens your device&apos;s share sheet so you can save or send it.
+            Meal photos are not included. The file is not encrypted, so anyone
+            you share it with can read it. Plectara removes its temporary copy
+            after sharing, or the next time the app opens.
+          </p>
+          <p className="mt-3">
+            <strong>Delete:</strong> Delete Account (Preferences → Account)
+            deletes the Auth0 sign-in account and removes diary data, meal
+            photos, the Home Screen widget snapshot, health-import connection,
+            on-device AI artifacts, and reminder schedules on this device. It
+            does not delete files you already exported. The same email can be
+            used to create a new account. If deletion cannot reach Auth0, the
+            app does not say the account was deleted.
+          </p>
+          <p className="mt-3">
+            Email{' '}
             <a
               href={`mailto:${site.supportEmail}`}
               className="font-medium text-link underline-offset-2 hover:underline"
             >
               {site.supportEmail}
             </a>{' '}
-            to request access or export of personal data we hold, including
-            GDPR requests, or if Delete Account could not reach Auth0.
-            After cloud backup ships, the same email path will cover
-            identifiable Cloud SQL rows linked to your account.
+            to request access to, correction of, or deletion of personal data
+            we hold on our servers, including GDPR requests, or if Delete
+            Account could not reach Auth0. After cloud backup ships, export and
+            deletion will also cover identifiable Cloud SQL rows linked to your
+            account.
           </p>
         </section>
 
