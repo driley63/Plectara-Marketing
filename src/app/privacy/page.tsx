@@ -53,7 +53,8 @@ export default function PrivacyPage() {
           <ul className="mt-3 list-disc space-y-1 pl-5">
             <li>
               Diary entries you log — meals, symptoms, sleep, activity, vitals,
-              weight, medications and supplements, bowel movements, notes, and
+              weight, medications and supplements, bowel movements, period days
+              (if you track your cycle), notes, and
               similar logs we add (for example drink intake)
             </li>
             <li>Optional photos you attach to saved meals</li>
@@ -171,7 +172,7 @@ export default function PrivacyPage() {
             type and recent chat turns, with names Plectara recognizes replaced
             the same way. Words you type that Plectara does not recognize as one
             of your logged names are sent as written. We do not send your full
-            diary, notes, photos, or password.
+            diary, notes, photos, password, or any cycle tracking data.
           </p>
           <p className="mt-3">
             Those explanations are labeled AI-assisted. On-device Insights
@@ -194,6 +195,27 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
+            Cycle Tracking
+          </h2>
+          <p className="mt-3">
+            Cycle tracking is optional and offered only when your profile&apos;s
+            sex assigned at birth is female. If you turn it on, Plectara stores
+            period days, the flow level you choose, and whether you use
+            hormonal birth control or have reached menopause, on this device
+            only. Cycle findings and next-period estimates are worked out on
+            this device and are never sent to Plectara&apos;s cloud service or
+            OpenAI, even when AI explanation or chat is on. Next-period
+            estimates appear only inside the app, never as notifications. The
+            Home Screen widget tile for cycle tracking shows a neutral label
+            you can rename (default &ldquo;Daily log&rdquo;) and never shows
+            period or flow wording. If you change your profile so cycle
+            tracking no longer applies, the tracker is hidden and your logged
+            period days stay until you delete them.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-deep-navy">
             Apple Health and Health Connect
           </h2>
           <p className="mt-3">
@@ -208,6 +230,7 @@ export default function PrivacyPage() {
             <li>Body weight</li>
             <li>Resting heart rate</li>
             <li>Blood pressure</li>
+            <li>Menstrual flow, only while cycle tracking is on</li>
           </ul>
           <p className="mt-3">
             We do not import continuous heart-rate streams, meals, medications,
