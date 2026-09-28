@@ -348,7 +348,15 @@ export default function PrivacyPage() {
             on-device AI artifacts, and reminder schedules on this device. It
             does not delete files you already exported. The same email can be
             used to create a new account. If deletion cannot reach Auth0, the
-            app does not say the account was deleted.
+            app does not say the account was deleted. Without the app, follow
+            the steps on{' '}
+            <Link
+              href="/delete-account"
+              className="font-medium text-link underline-offset-2 hover:underline"
+            >
+              plectara.com/delete-account
+            </Link>
+            .
           </p>
           <p className="mt-3">
             Email{' '}

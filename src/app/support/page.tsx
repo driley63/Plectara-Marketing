@@ -47,7 +47,9 @@ const faqs: readonly { question: string; parts: readonly FaqPart[] }[] = [
     parts: [
       'Edit or delete individual diary entries in the app. Delete Account (Preferences → Account) deletes your Plectara sign-in account and removes diary data on this device. Uninstalling Plectara also removes local data on that device. Email ',
       supportEmailLink,
-      ' for questions about your account, or if Delete Account could not finish.',
+      ' for questions about your account, or if Delete Account could not finish. Without the app, see ',
+      { label: 'Delete Your Account', href: '/delete-account' },
+      '.',
     ],
   },
   {
