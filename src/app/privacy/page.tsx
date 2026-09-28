@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 25 September 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 28 September 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -269,8 +269,13 @@ export default function PrivacyPage() {
             Analytics and diagnostic logs, if enabled, may send operational
             event names and coded parameters to Firebase Analytics. They must
             not include diary contents, medication names, notes, photos, or
-            similar health free text. We do not sell health data. We do not
-            use Apple Health, Health Connect, or diary data for advertising.
+            similar health free text. Firebase also records screen views and
+            sessions, a random ID for each app install, and an approximate
+            region worked out from your IP address; Plectara does not ask for
+            your location. Plectara turns off Firebase&apos;s collection of
+            your device&apos;s advertising ID. We do not sell health data. We
+            do not use Apple Health, Health Connect, or diary data for
+            advertising.
           </p>
           <p className="mt-3">
             If you email support from this website, we receive the address and
