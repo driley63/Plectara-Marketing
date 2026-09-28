@@ -177,7 +177,7 @@ export default function PrivacyPage() {
           <p className="mt-3">
             Those explanations are labeled AI-assisted. On-device Insights
             still run if you tap Don’t Allow. You can change explanation and
-            chat later in Preferences → AI insights. Delete Account removes
+            chat later in Preferences → AI Insights. Delete Account removes
             on-device AI artifacts and clears the stored permission. OpenAI
             processes this data as our subprocessor under its API terms. We do
             not use it for advertising or sell it. Under OpenAI’s current API
@@ -207,7 +207,7 @@ export default function PrivacyPage() {
             OpenAI, even when AI explanation or chat is on. Next-period
             estimates appear only inside the app, never as notifications. The
             Home Screen widget tile for cycle tracking shows a neutral label
-            you can rename (default &ldquo;Daily log&rdquo;) and never shows
+            you can rename (default &ldquo;Daily Log&rdquo;) and never shows
             period or flow wording. If you change your profile so cycle
             tracking no longer applies, the tracker is hidden and your logged
             period days stay until you delete them.
