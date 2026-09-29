@@ -9,7 +9,7 @@ Plectara lockups, symbol, and app tile from the PL-OS brand kit (v2.1.0, jade-he
 | `plectara-symbol.svg` | Vector favicon |
 | `plectara-512.png` / `plectara-1024.png` | Raster favicon, Apple touch icon, JSON-LD |
 | `plectara-app-icon.png` / `.svg` | Opaque 1024 app tile |
-| `plectara-social-card.png` | Open Graph / Twitter (1200 × 630) |
+| `plectara-social-card.png` / `.svg` | Woven Open Graph / Twitter card (1200 × 630) and editable source |
 | `plectara-symbol-white.png` | Dark-surface symbol if needed |
 | `favicon.ico` | Legacy favicon |
 
@@ -18,3 +18,7 @@ Every full-color logo uses a jade head (`#76B7A5`) and the original strand color
 Monochrome artwork uses one color for the entire figure and lettering: ink on light backgrounds or white on dark backgrounds. Preserve the supplied lettering shapes, spacing, capitalization, and proportions; Inter is for supporting copy only. The app icon in `src/app/icon.png` is the approved 512 px Plectara tile.
 
 Current standards and downloadable masters: [PL-OS brand kit](https://pl-os.plectara.com/specs/01-brand/plectara-brand-kit/).
+
+The social card uses the approved woven yarn master from the PL-OS app visual
+kit, the canonical reversed lockup, and the existing “A healthier whole.”
+tagline. The raster file has no transparency.

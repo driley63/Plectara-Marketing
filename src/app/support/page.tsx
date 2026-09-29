@@ -121,7 +121,7 @@ export default function SupportPage() {
             ))}
           </div>
 
-          <div className="rounded-lg border border-divider bg-white p-5 sm:p-6">
+          <div className="mint-card p-5 sm:p-6">
             <h2 className="text-xl font-semibold text-deep-navy">
               Email Support
             </h2>

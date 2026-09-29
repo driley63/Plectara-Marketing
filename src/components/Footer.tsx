@@ -4,7 +4,7 @@ import { site } from '@/lib/site';
 
 export function Footer() {
   return (
-    <footer className="bg-deep-navy text-white">
+    <footer className="site-footer">
       <div className="mx-auto grid max-w-[1120px] gap-8 px-4 py-12 sm:px-6 lg:grid-cols-[1.4fr_1fr_1fr] lg:px-8">
         <div>
           <BrandMark reversed size="sm" />
