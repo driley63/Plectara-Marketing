@@ -5,7 +5,7 @@ export const socialCard = {
   url: '/brand/plectara-social-card.png',
   width: 1200,
   height: 630,
-  alt: 'Plectara',
+  alt: 'Plectara — A healthier whole on woven threads',
 } as const;
 
 type SocialMetadataInput = {

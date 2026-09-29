@@ -24,6 +24,8 @@
   --color-ai-purple: #7b61ff;
   --color-white: #ffffff;
   --color-canvas: var(--color-ivory);
+  --color-paper: #ffffff;
+  --color-mint: #e9f3ef;
   --color-divider: #d8e1de;
   --color-light-gray: #b8cbcb;
   --color-dark-gray: #567788;
@@ -48,6 +50,22 @@
 :root {
   color-scheme: light;
   --gradient-brand: linear-gradient(135deg, #287e80 0%, #76b7a5 100%);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --color-canvas: #142832;
+    --color-paper: #192d38;
+    --color-mint: #223d49;
+    --color-deep-navy: #faf8f4;
+    --color-text: #faf8f4;
+    --color-muted: #b8cbcb;
+    --color-divider: #567788;
+    --color-light-gray: #b8cbcb;
+    --color-link: #8dc7b7;
+    --color-ai: #c1b1ff;
+  }
 }
 
 html {
@@ -95,4 +113,151 @@ body {
 
 .skip-link:focus {
   top: 16px;
+}
+
+/* The same approved yarn artwork appears in the app and widgets. Reading
+   surfaces stay opaque so the site remains comfortable at article length. */
+.site-header,
+.site-footer,
+.woven-hero,
+.woven-showcase {
+  background-color: #192d38;
+  background-image: url('/marketing/plectara-woven-threads.webp');
+  background-position: center;
+  background-size: cover;
+}
+
+.site-header {
+  position: relative;
+  color: #faf8f4;
+  background-image:
+    linear-gradient(90deg, rgb(25 45 56 / 96%), rgb(25 45 56 / 88%)),
+    url('/marketing/plectara-woven-threads.webp');
+}
+
+.site-header::after,
+.site-footer::before,
+.soft-copper-rule::before {
+  content: '';
+  position: absolute;
+  inset-inline: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #c88764 16%, #c88764 84%, transparent);
+  pointer-events: none;
+}
+
+.site-header::after {
+  bottom: 0;
+}
+
+.site-header-menu {
+  background: #192d38;
+  border: 1px solid #8da4a6;
+  box-shadow: 0 12px 32px rgb(0 0 0 / 24%);
+}
+
+.soft-copper-rule {
+  position: relative;
+}
+
+.soft-copper-rule::before {
+  top: 0;
+}
+
+.woven-hero {
+  background-image:
+    linear-gradient(90deg, rgb(25 45 56 / 96%) 0%, rgb(25 45 56 / 90%) 30%, rgb(25 45 56 / 72%) 57%, rgb(25 45 56 / 28%) 100%),
+    url('/marketing/plectara-woven-threads.webp');
+  background-position: center, center 52%;
+}
+
+.hero-device {
+  filter: drop-shadow(0 24px 32px rgb(8 25 32 / 48%));
+}
+
+.section-heading::after {
+  content: '';
+  display: block;
+  width: 72px;
+  height: 2px;
+  margin-top: 18px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #c88764, rgb(200 135 100 / 8%));
+}
+
+.mint-card,
+.site-card {
+  border: 1px solid rgb(200 135 100 / 60%);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgb(25 45 56 / 6%);
+}
+
+.mint-card {
+  background: var(--color-mint);
+}
+
+.site-card {
+  background: var(--color-paper);
+}
+
+.woven-showcase {
+  background-image:
+    linear-gradient(90deg, rgb(25 45 56 / 97%) 0%, rgb(25 45 56 / 89%) 57%, rgb(25 45 56 / 70%) 100%),
+    url('/marketing/plectara-woven-threads.webp');
+  background-position: center, center 60%;
+}
+
+.woven-benefit-card {
+  border: 1px solid rgb(200 135 100 / 64%);
+  border-radius: 16px;
+  background: rgb(25 45 56 / 96%);
+}
+
+.download-band {
+  background-color: #192d38;
+  background-image: linear-gradient(110deg, #192d38 0%, #223d49 65%, #287e80 100%);
+}
+
+.download-band .store-disclaimer,
+.download-band .store-caption {
+  color: #e0ece7;
+}
+
+.site-footer {
+  position: relative;
+  color: #faf8f4;
+  background-image:
+    linear-gradient(90deg, rgb(25 45 56 / 99%), rgb(25 45 56 / 87%)),
+    url('/marketing/plectara-woven-threads.webp');
+}
+
+.site-footer::before {
+  top: 0;
+}
+
+main#main:not(.marketing-home) {
+  min-height: 45vh;
+  background: var(--color-canvas);
+}
+
+main#main:not(.marketing-home)::before {
+  content: '';
+  display: block;
+  height: 22px;
+  background-color: #192d38;
+  background-image:
+    linear-gradient(90deg, rgb(25 45 56 / 80%), rgb(25 45 56 / 30%)),
+    url('/marketing/plectara-woven-threads.webp');
+  background-position: center;
+  background-size: cover;
+  border-bottom: 1px solid #c88764;
+}
+
+@media (max-width: 640px) {
+  .woven-hero {
+    background-image:
+      linear-gradient(90deg, rgb(25 45 56 / 94%), rgb(25 45 56 / 77%)),
+      url('/marketing/plectara-woven-threads.webp');
+  }
+
 }

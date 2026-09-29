@@ -66,7 +66,7 @@ export function StoreLinks() {
                 </div>
               )}
               {ready ? null : (
-                <figcaption className="mt-2 text-center text-xs font-medium text-muted">
+                <figcaption className="store-caption mt-2 text-center text-xs font-medium text-muted">
                   Coming soon
                 </figcaption>
               )}
@@ -74,7 +74,7 @@ export function StoreLinks() {
           );
         })}
       </div>
-      <p className="mt-3 max-w-[40rem] text-xs leading-5 text-muted">
+      <p className="store-disclaimer mt-3 max-w-[40rem] text-xs leading-5 text-muted">
         Apple, the Apple logo, and App Store are trademarks of Apple Inc.,
         registered in the U.S. and other countries. Google Play and the Google
         Play logo are trademarks of Google LLC.
