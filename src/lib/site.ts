@@ -66,6 +66,7 @@ export const deviceShots = {
   charts: 'charts-tab.png',
   insights: 'insights-tab.png',
   chat: 'ai-chat.png',
+  watch: 'watch-quick-log.png',
 } as const;
 
 export const widgetShots = [

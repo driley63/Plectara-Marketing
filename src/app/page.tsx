@@ -2,6 +2,7 @@ import { ContactForm } from '@/components/ContactForm';
 import { JsonLd } from '@/components/JsonLd';
 import { PhotoPlaceholder } from '@/components/PhotoPlaceholder';
 import { StoreLinks } from '@/components/StoreLinks';
+import { WatchPreview } from '@/components/WatchPreview';
 import { deviceShots, features, pillars, site, widgetShots } from '@/lib/site';
 import { existsSync } from 'fs';
 import Link from 'next/link';
@@ -229,6 +230,41 @@ export default function HomePage() {
                 />
               ))}
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        id="watch"
+        aria-labelledby="watch-heading"
+        className="soft-copper-rule scroll-mt-20 bg-paper"
+      >
+        <div className="mx-auto grid max-w-[1120px] items-center gap-12 px-4 py-16 sm:px-6 lg:grid-cols-[minmax(0,1fr)_auto] lg:px-8 lg:py-20">
+          <div>
+            <p className="text-sm font-semibold uppercase tracking-[0.08em] text-link">
+              Plectara on your wrist
+            </p>
+            <h2
+              id="watch-heading"
+              className="section-heading mt-4 text-3xl font-semibold tracking-tight text-deep-navy"
+            >
+              Quick Log, right from your watch.
+            </h2>
+            <p className="mt-5 max-w-[560px] text-base leading-7 text-muted">
+              The moment doesn’t have to wait until you reach for your phone.
+              Use every Plectara Quick Log type directly from your watch, with
+              a few taps that fit naturally into your day.
+            </p>
+            <p className="mt-4 max-w-[560px] text-base leading-7 text-muted">
+              Capture what matters as it happens, then carry on knowing those
+              details remain part of your bigger picture.
+            </p>
+            <p className="mt-8 text-sm font-semibold text-link">
+              Coming to Apple Watch and Android watches.
+            </p>
+          </div>
+          <div className="watch-stage mx-auto flex min-h-[510px] w-full max-w-[480px] items-center justify-center overflow-hidden rounded-[28px] border border-copper/60 px-6 py-8 sm:min-h-[570px] sm:px-10">
+            <WatchPreview src={`/marketing/${deviceShots.watch}`} />
           </div>
         </div>
       </section>

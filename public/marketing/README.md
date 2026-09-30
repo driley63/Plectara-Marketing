@@ -12,6 +12,12 @@
 | `ai-chat.png` | AI Chat conversation in a device frame, featured within Features |
 | `widget-medium.png` | Medium Home Screen widget (habits and suggestions) |
 | `widget-large.png` | Large Home Screen widget |
+| `watch-quick-log.png` | Quick Log shown in a watch case with a woven band |
+
+The watch artwork combines the case and screen from the supplied
+Apple Watch simulator capture with a dark woven band. The detached simulator
+toolbar and exterior shadow were removed. The band is illustrative; the watch
+app screen and case come from the supplied capture without redrawing the UI.
 
 App screen PNGs include the phone bezel and side buttons, with transparent space
 outside the device. Widget PNGs are cropped to the rounded widget edges with

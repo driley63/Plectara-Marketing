@@ -31,6 +31,11 @@ export function Footer() {
               </Link>
             </li>
             <li>
+              <Link href="/#watch" className="hover:text-white">
+                Watch
+              </Link>
+            </li>
+            <li>
               <Link href="/#download" className="hover:text-white">
                 Download
               </Link>
