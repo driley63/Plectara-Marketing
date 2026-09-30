@@ -21,13 +21,13 @@ export function Footer() {
               </Link>
             </li>
             <li>
-              <Link href="/#widgets" className="hover:text-white">
-                Widgets
+              <Link href="/#features" className="hover:text-white">
+                Features
               </Link>
             </li>
             <li>
-              <Link href="/#features" className="hover:text-white">
-                Features
+              <Link href="/#widgets" className="hover:text-white">
+                Widgets
               </Link>
             </li>
             <li>

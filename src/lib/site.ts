@@ -41,15 +41,8 @@ export const features = [
     body: 'The things you do regularly become easier to record. Plectara learns repeated activities and suggests useful shortcuts, with control to pin, rename, hide, or remove them.',
   },
   {
-    title: 'Explore your patterns in conversation',
-    id: 'chat',
-    ai: true,
-    body: 'Ask questions about what you’re noticing. Optional AI-assisted chat helps you explore your recent insights and consider what to record next.',
-  },
-  {
     title: 'See what may be connected',
     id: 'insights',
-    ai: true,
     body: 'Explore relationships between your habits and how you feel. Plectara brings patterns into focus, with explanations and practical next steps to consider.',
   },
   {
@@ -72,14 +65,10 @@ export const deviceShots = {
   timeline: 'timeline-tab.png',
   charts: 'charts-tab.png',
   insights: 'insights-tab.png',
+  chat: 'ai-chat.png',
 } as const;
 
 export const widgetShots = [
-  {
-    aspect: 'widget-small' as const,
-    label: 'Small widget — one-tap capture',
-    file: 'widget-small.png',
-  },
   {
     aspect: 'widget-medium' as const,
     label: 'Medium widget — habits and suggestions',

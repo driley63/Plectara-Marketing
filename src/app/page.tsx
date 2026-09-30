@@ -18,7 +18,7 @@ export default function HomePage() {
       <JsonLd />
 
       <section className="woven-hero soft-copper-rule relative isolate overflow-hidden">
-        <div className="relative mx-auto grid max-w-[1120px] items-center gap-10 px-4 py-16 sm:px-6 min-h-[34rem] lg:min-h-[40rem] lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-16 xl:gap-x-24 lg:px-8 lg:py-24">
+        <div className="relative mx-auto grid max-w-[1120px] items-center gap-10 px-4 py-16 sm:px-6 min-h-[34rem] lg:min-h-[40rem] lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-x-8 xl:gap-x-12 lg:px-8 lg:py-16">
           <div>
             <p className="text-sm font-semibold uppercase tracking-[0.08em] text-fresh-lime">
               Personal health intelligence
@@ -42,8 +42,9 @@ export default function HomePage() {
             </div>
           </div>
           <PhotoPlaceholder
-            className="hero-device hidden justify-self-end lg:flex"
-            frameClassName="origin-bottom rotate-[18deg] drop-shadow-2xl"
+            className="hero-device hidden justify-self-end lg:mr-5 lg:flex lg:-translate-x-14 xl:mr-8 xl:-translate-x-4"
+            frameClassName="origin-bottom rotate-[10deg] drop-shadow-2xl xl:rotate-[14deg]"
+            phoneSize="hero"
             label="Today tab on device"
             src={marketingSrc(deviceShots.hero)}
             priority
@@ -94,6 +95,83 @@ export default function HomePage() {
       </section>
 
       <section
+        id="features"
+        aria-labelledby="features-heading"
+        className="soft-copper-rule scroll-mt-20 bg-canvas"
+      >
+        <div className="mx-auto max-w-[1120px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+          <div className="grid items-start gap-12 lg:grid-cols-[auto_1fr]">
+            <PhotoPlaceholder
+              className="mx-auto max-md:hidden"
+              label="Insights tab on device"
+              src={marketingSrc(deviceShots.insights)}
+            />
+            <div>
+              <h2
+                id="features-heading"
+                className="section-heading text-3xl font-semibold tracking-tight text-deep-navy"
+              >
+                A fuller picture. A clearer next step.
+              </h2>
+              <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
+                From a quick daily log to a closer look at a recurring pattern, Plectara helps
+                you bring your experiences together and explore what matters
+                to your well-being.
+              </p>
+              <ul className="mt-8 grid gap-6 sm:grid-cols-2">
+                {features.map((feature) => (
+                  <li
+                    key={feature.title}
+                    id={'id' in feature ? feature.id : undefined}
+                    className="site-card p-5"
+                  >
+                    <div className="flex flex-wrap items-center gap-2">
+                      <h3 className="text-lg font-semibold text-deep-navy">
+                        {feature.title}
+                      </h3>
+                    </div>
+                    <p className="mt-2 text-sm leading-6 text-muted">
+                      {feature.body}
+                    </p>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          <section
+            id="chat"
+            aria-labelledby="chat-heading"
+            className="woven-showcase mt-16 scroll-mt-24 overflow-hidden rounded-3xl border border-copper/70"
+          >
+            <div className="grid items-center gap-10 p-6 sm:p-10 lg:grid-cols-[minmax(0,1fr)_auto] lg:gap-16">
+              <div>
+                <h3 id="chat-heading" className="text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+                  Explore your insights in conversation.
+                </h3>
+                <p className="mt-5 max-w-[560px] text-base leading-7 text-white/85">
+                  Ask about the patterns you’re noticing. AI Chat helps you explore
+                  your latest findings in everyday language and think through
+                  what they might mean for your daily life.
+                </p>
+                <p className="mt-4 max-w-[560px] text-base leading-7 text-white/85">
+                  Wondering how an evening routine lines up with your sleep, or
+                  whether certain days have something in common? Start with a
+                  question in your own words, then look at familiar habits from
+                  a new angle and choose what you want to pay closer attention to.
+                </p>
+              </div>
+              <PhotoPlaceholder
+                className="mx-auto"
+                label="AI Chat conversation about recent insights on device"
+                src={marketingSrc(deviceShots.chat)}
+              />
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section
         id="widgets"
         aria-labelledby="widgets-heading"
         className="woven-showcase soft-copper-rule scroll-mt-20"
@@ -138,7 +216,7 @@ export default function HomePage() {
               Find your fit.
             </h3>
             <p className="mt-3 max-w-[640px] text-base leading-7 text-white/85">
-              Choose from three sizes to suit your Home Screen and your routine. Each keeps
+              Choose from medium and large sizes to suit your Home Screen and your routine. Each keeps
               everyday capture within easy reach.
             </p>
             <div className="mt-10 flex flex-wrap items-end justify-center gap-8 lg:justify-start">
@@ -150,59 +228,6 @@ export default function HomePage() {
                   src={marketingSrc(shot.file)}
                 />
               ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section
-        id="features"
-        aria-labelledby="features-heading"
-        className="soft-copper-rule scroll-mt-20 bg-canvas"
-      >
-        <div className="mx-auto max-w-[1120px] px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
-          <div className="grid items-start gap-12 lg:grid-cols-[auto_1fr]">
-            <PhotoPlaceholder
-              className="mx-auto max-md:hidden"
-              label="Insights tab on device"
-              src={marketingSrc(deviceShots.insights)}
-            />
-            <div>
-              <h2
-                id="features-heading"
-                className="section-heading text-3xl font-semibold tracking-tight text-deep-navy"
-              >
-                A fuller picture. A clearer next step.
-              </h2>
-              <p className="mt-4 max-w-[760px] text-base leading-7 text-muted">
-                From a quick daily log to a closer look at a recurring pattern, Plectara helps
-                you bring your experiences together and explore what matters
-                to your well-being.
-              </p>
-              <ul className="mt-8 grid gap-6 sm:grid-cols-2">
-                {features.map((feature) => (
-                  <li
-                    key={feature.title}
-                    id={'id' in feature ? feature.id : undefined}
-                    className="site-card p-5"
-                  >
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="text-lg font-semibold text-deep-navy">
-                        {feature.title}
-                      </h3>
-                      {'ai' in feature && feature.ai ? (
-                        <span className="inline-flex items-center gap-1 rounded-sm bg-mint px-2 py-0.5 text-xs font-semibold text-ai">
-                          <span aria-hidden="true">●</span>
-                          AI-assisted
-                        </span>
-                      ) : null}
-                    </div>
-                    <p className="mt-2 text-sm leading-6 text-muted">
-                      {feature.body}
-                    </p>
-                  </li>
-                ))}
-              </ul>
             </div>
           </div>
         </div>

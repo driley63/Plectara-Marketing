@@ -3,8 +3,8 @@ import { BrandMark } from '@/components/BrandMark';
 
 const nav = [
   { href: '/#overview', label: 'Overview' },
-  { href: '/#widgets', label: 'Widgets' },
   { href: '/#features', label: 'Features' },
+  { href: '/#widgets', label: 'Widgets' },
   { href: '/#contact', label: 'Contact' },
 ];
 
