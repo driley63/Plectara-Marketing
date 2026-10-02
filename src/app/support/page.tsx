@@ -39,7 +39,7 @@ const faqs: readonly { question: string; parts: readonly FaqPart[] }[] = [
   {
     question: 'How Do I Connect or Disconnect Apple Health or Health Connect?',
     parts: [
-      'Connecting is optional. You can skip it during onboarding and connect or disconnect later in Preferences. Disconnecting stops new imports. Entries already copied into Plectara stay in your diary until you delete them. You can also revoke access in the Health or Health Connect apps on your device.',
+      'Connecting is optional. You can skip it during onboarding and connect or disconnect later in Preferences. Only logs you have turned on are imported. Turning a log off stops new imports of that log, and turning it back on includes it again from the date you started using Plectara. Disconnecting stops new imports. Entries already copied into Plectara stay in your diary until you delete them. You can also revoke access in the Health or Health Connect apps on your device.',
     ],
   },
   {

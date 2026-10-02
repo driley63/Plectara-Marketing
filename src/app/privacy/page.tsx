@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 28 September 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 2 October 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -222,16 +222,27 @@ export default function PrivacyPage() {
             If you choose to connect Apple Health (iOS) or Health Connect
             (Android), Plectara reads — and does not write — the following
             data from that store, only from the date you started using
-            Plectara:
+            Plectara, and only while the matching log is turned on:
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5">
-            <li>Sleep sessions</li>
-            <li>Workouts and activities (including distance when available)</li>
-            <li>Body weight</li>
-            <li>Resting heart rate</li>
-            <li>Blood pressure</li>
+            <li>Sleep sessions, while sleep tracking is on</li>
+            <li>
+              Workouts and activities (including distance when available),
+              while activity tracking is on
+            </li>
+            <li>Body weight, while weight tracking is on</li>
+            <li>
+              Resting heart rate and blood pressure, while vitals tracking is
+              on
+            </li>
             <li>Menstrual flow, only while cycle tracking is on</li>
           </ul>
+          <p className="mt-3">
+            Turning a log off stops new imports of that data. Logs already
+            saved stay until you delete them. Turning the log back on includes
+            it again from the date you started using Plectara. We do not delete
+            imported logs when you disconnect Apple Health or Health Connect.
+          </p>
           <p className="mt-3">
             We do not import continuous heart-rate streams, meals, medications,
             bowel logs, clinical records, or other Health categories.
