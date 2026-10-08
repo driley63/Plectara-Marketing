@@ -54,7 +54,7 @@ export default function PrivacyPage() {
             <li>
               Diary entries you log — meals, symptoms, sleep, activity, vitals,
               weight, medications and supplements, bowel movements, period days
-              (if you track your cycle), notes, and
+              (if you track your cycle), Daily Check-In ratings, notes, and
               similar logs we add (for example drink intake)
             </li>
             <li>Optional photos you attach to saved meals</li>
@@ -177,7 +177,8 @@ export default function PrivacyPage() {
             type and recent chat turns, with names Plectara recognizes replaced
             the same way. Words you type that Plectara does not recognize as one
             of your logged names are sent as written. We do not send your full
-            diary, notes, photos, password, or any cycle tracking data.
+            diary, notes, photos, password, any cycle tracking data, or your
+            Energy, Mood, and Stress ratings.
             Before-and-after comparisons around other changes you add (such as
             a diet change) stay on this device and are never sent, including
             the names you give those changes. Comparisons around a medication
@@ -221,6 +222,25 @@ export default function PrivacyPage() {
             period or flow wording. If you change your profile so cycle
             tracking no longer applies, the tracker is hidden and your logged
             period days stay until you delete them.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-deep-navy">
+            Energy, Mood, and Stress
+          </h2>
+          <p className="mt-3">
+            If you choose More Energy, Better Mood, or Less Stress as a goal,
+            the Daily Check-In offers optional 0–10 ratings for Energy, Mood,
+            and Stress. You can skip any of them. These ratings are stored in
+            your encrypted diary on this device and included when you export
+            your data. The patterns Plectara finds in them, and the names of
+            these goals, are worked out on this device and are never sent to
+            Plectara&apos;s cloud service or OpenAI, even when AI explanation
+            or chat is on. Plectara does not diagnose mood or mental health
+            conditions. If your ratings stay very low for Mood or very high for
+            Stress, Insights may suggest reaching out to someone you trust or a
+            clinician; that suggestion is shown only on this device.
           </p>
         </section>
 
