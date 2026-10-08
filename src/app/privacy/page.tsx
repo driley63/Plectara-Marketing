@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 2 October 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 8 October 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -64,6 +64,11 @@ export default function PrivacyPage() {
             </li>
             <li>
               Medication schedules, reminders you enable, streaks, and badges
+            </li>
+            <li>
+              Medication start dates and other changes you choose to compare
+              symptoms around (such as a diet change, with its name and start
+              date)
             </li>
             <li>
               Account identifiers from sign-in (see Account and Sign-In)
@@ -173,6 +178,11 @@ export default function PrivacyPage() {
             the same way. Words you type that Plectara does not recognize as one
             of your logged names are sent as written. We do not send your full
             diary, notes, photos, password, or any cycle tracking data.
+            Before-and-after comparisons around other changes you add (such as
+            a diet change) stay on this device and are never sent, including
+            the names you give those changes. Comparisons around a medication
+            start date may be sent with the medication name replaced by a
+            placeholder.
           </p>
           <p className="mt-3">
             Those explanations are labeled AI-assisted. On-device Insights
@@ -350,8 +360,9 @@ export default function PrivacyPage() {
           </p>
           <p className="mt-3">
             <strong>Export:</strong> Export My Data (Preferences → Account)
-            creates one JSON file with your diary entries, profile, medications,
-            saved meals and activities, habits, AI chat, consents, and settings,
+            creates one JSON file with your diary entries, profile (including
+            changes you compare), medications (including start dates), saved
+            meals and activities, habits, AI chat, consents, and settings,
             and opens your device&apos;s share sheet so you can save or send it.
             Meal photos are not included. The file is not encrypted, so anyone
             you share it with can read it. Plectara removes its temporary copy
