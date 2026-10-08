@@ -52,10 +52,11 @@ export default function PrivacyPage() {
           </p>
           <ul className="mt-3 list-disc space-y-1 pl-5">
             <li>
-              Diary entries you log — meals, symptoms, sleep, activity, vitals,
+              Diary entries you log — meals, beverages (water, caffeine, or
+              alcohol, if you track them), symptoms, sleep, activity, vitals,
               weight, medications and supplements, bowel movements, period days
               (if you track your cycle), Daily Check-In ratings, notes, and
-              similar logs we add (for example drink intake)
+              similar logs we add
             </li>
             <li>Optional photos you attach to saved meals</li>
             <li>
@@ -178,7 +179,9 @@ export default function PrivacyPage() {
             the same way. Words you type that Plectara does not recognize as one
             of your logged names are sent as written. We do not send your full
             diary, notes, photos, password, any cycle tracking data, or your
-            Energy, Mood, and Stress ratings.
+            Energy, Mood, and Stress ratings. Findings about alcohol stay on
+            this device unless you also turn on Include Alcohol in AI Insights,
+            which is off by default.
             Before-and-after comparisons around other changes you add (such as
             a diet change) stay on this device and are never sent, including
             the names you give those changes. Comparisons around a medication
@@ -222,6 +225,27 @@ export default function PrivacyPage() {
             period or flow wording. If you change your profile so cycle
             tracking no longer applies, the tracker is hidden and your logged
             period days stay until you delete them.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-deep-navy">Beverages</h2>
+          <p className="mt-3">
+            Beverage tracking is optional. If you turn it on, you choose
+            whether to track water, caffeine, or alcohol. Plectara stores each
+            serving&apos;s amount and time (or, for amounts you add to a
+            day&apos;s total, just the day) in your encrypted diary on this
+            device, and includes them when you export your data. Water and
+            caffeine are stored as volume; alcohol is stored as a count of
+            drinks. Meals you tag Caffeine or Alcohol also count as one
+            serving. Patterns Plectara finds, such as caffeine late in the day
+            before poor sleep, are observations, not diagnoses. Water and
+            caffeine findings follow the same AI sharing choice as other
+            findings. Alcohol findings are worked out on this device and are
+            never sent to Plectara&apos;s cloud service or OpenAI unless you
+            turn on Include Alcohol in AI Insights (Preferences → AI Insights),
+            which is off by default. The Home Screen widget and watch apps
+            never show alcohol.
           </p>
         </section>
 
