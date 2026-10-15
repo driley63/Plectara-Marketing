@@ -72,8 +72,8 @@ export default function PrivacyPage() {
               date)
             </li>
             <li>
-              Plans you start from Insights, with their steps and end-of-plan
-              comparison
+              Plans you start from Insights, with their steps, the days you
+              check steps off, and the end-of-plan comparison
             </li>
             <li>
               Account identifiers from sign-in (see Account and Sign-In)
