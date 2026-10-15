@@ -250,9 +250,9 @@ export default function PrivacyPage() {
             whether to track water, caffeine, or alcohol. Plectara stores each
             serving&apos;s amount and time (or, for amounts you add to a
             day&apos;s total, just the day) in your encrypted diary on this
-            device, and includes them when you export your data. Water and
-            caffeine are stored as volume; alcohol is stored as a count of
-            drinks. Meals you tag Caffeine or Alcohol also count as one
+            device, and includes them when you export your data. Water is
+            stored as volume, caffeine as milligrams of caffeine, and alcohol
+            as a count of drinks. Meals you tag Caffeine or Alcohol also count as one
             serving. Patterns Plectara finds, such as caffeine late in the day
             before poor sleep, are observations, not diagnoses. Water and
             caffeine findings follow the same AI sharing choice as other
