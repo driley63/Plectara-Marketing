@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 9 October 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 15 October 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -269,6 +269,22 @@ export default function PrivacyPage() {
 
         <section>
           <h2 className="text-xl font-semibold text-deep-navy">
+            Saved Bowel Movements
+          </h2>
+          <p className="mt-3">
+            You can save a bowel movement you log often (its label, stool type,
+            color, odor, and volume) for one-tap Quick Log. Saved bowel
+            movements are stored in the encrypted database on this device,
+            included when you export your data, and removed by Delete Account.
+            If you pin one, or Plectara learns it as a Habit, the Home Screen
+            widget and watch apps show only the neutral label &ldquo;Saved
+            Log&rdquo; &mdash; never your label or any bowel wording &mdash; and
+            a tap sends only an internal id back to your phone.
+          </p>
+        </section>
+
+        <section>
+          <h2 className="text-xl font-semibold text-deep-navy">
             Energy, Mood, and Stress
           </h2>
           <p className="mt-3">
@@ -424,7 +440,8 @@ export default function PrivacyPage() {
             <strong>Export:</strong> Export My Data (Preferences → Account)
             creates one JSON file with your diary entries, profile (including
             changes you compare), medications (including start dates), saved
-            meals and activities, habits, plans, AI chat, consents, and settings,
+            meals, activities, and bowel movements, habits, plans, AI chat,
+            consents, and settings,
             and opens your device&apos;s share sheet so you can save or send it.
             Meal photos are not included. The file is not encrypted, so anyone
             you share it with can read it. Plectara removes its temporary copy
