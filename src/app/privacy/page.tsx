@@ -6,7 +6,7 @@ import { site } from '@/lib/site';
 export const metadata: Metadata = pageMetadata({
   title: 'Privacy Policy',
   description:
-    'How Plectara handles diary data, accounts, Apple Health and Health Connect, and optional OpenAI explanations.',
+    'How Plectara handles diary data, accounts, Apple Health and Health Connect, and optional OpenAI explanations and plans.',
   path: '/privacy',
 });
 
@@ -21,7 +21,7 @@ export default function PrivacyPage() {
       <h1 className="mt-4 text-4xl font-semibold tracking-tight text-deep-navy">
         Plectara Privacy Policy
       </h1>
-      <p className="mt-4 text-sm text-muted">Last updated: 8 October 2026</p>
+      <p className="mt-4 text-sm text-muted">Last updated: 9 October 2026</p>
 
       <div className="mt-10 space-y-8 text-base leading-7 text-muted">
         <p>
@@ -70,6 +70,10 @@ export default function PrivacyPage() {
               Medication start dates and other changes you choose to compare
               symptoms around (such as a diet change, with its name and start
               date)
+            </li>
+            <li>
+              Plans you start from Insights, with their steps and end-of-plan
+              comparison
             </li>
             <li>
               Account identifiers from sign-in (see Account and Sign-In)
@@ -164,7 +168,7 @@ export default function PrivacyPage() {
             disclaimer does not grant this permission.
           </p>
           <p className="mt-3">
-            When you tap Allow, Plectara may send structured on-device findings
+            When you tap Allow AI Insights, Plectara may send structured on-device findings
             — codes, labels, metrics, a care-urgency label, and the local
             summary — to Plectara’s cloud service (Google Cloud). Before
             anything leaves your device, names you gave meals, activities,
@@ -173,7 +177,15 @@ export default function PrivacyPage() {
             the real names back in on your device when it shows the reply. That
             service then sends the same findings to OpenAI, a third-party AI
             provider, so OpenAI can write a plain-language explanation at most
-            once per day when you open the app. AI chat about recent findings
+            once per day when you open the app. If you ask for a plan, the same
+            findings and which finding you picked are sent so OpenAI can draft
+            a short, optional lifestyle experiment; Plectara&apos;s cloud
+            service checks the draft for safety before the app shows it, and
+            the plan itself is stored only on this device. When sharing is off,
+            or the finding you pick is one that never leaves this device,
+            Plectara builds a rule-based plan on this device and sends nothing.
+            The end-of-plan comparison of your logs is worked out on this
+            device and never sent. AI chat about recent findings
             uses the same findings-only context and also sends the question you
             type and recent chat turns, with names Plectara recognizes replaced
             the same way. Words you type that Plectara does not recognize as one
@@ -189,9 +201,11 @@ export default function PrivacyPage() {
             placeholder.
           </p>
           <p className="mt-3">
-            Those explanations are labeled AI-assisted. On-device Insights
-            still run if you tap Don’t Allow. You can change explanation and
-            chat later in Preferences → AI Insights. Delete Account removes
+            Those explanations and plans are labeled AI-assisted. On-device
+            Insights and rule-based plans still work if you tap Not Now. If you
+            chose Not Now, Insights may offer once or twice more to turn AI
+            Insights on; you can also change explanations, plans, and chat later
+            in Preferences → AI Insights. Delete Account removes
             on-device AI artifacts and clears the stored permission. OpenAI
             processes this data as our subprocessor under its API terms. We do
             not use it for advertising or sell it. Under OpenAI’s current API
@@ -218,7 +232,8 @@ export default function PrivacyPage() {
             hormonal birth control or have reached menopause, on this device
             only. Cycle findings and next-period estimates are worked out on
             this device and are never sent to Plectara&apos;s cloud service or
-            OpenAI, even when AI explanation or chat is on. Next-period
+            OpenAI, even when AI explanations, plans, or chat are on.
+            Next-period
             estimates appear only inside the app, never as notifications. The
             Home Screen widget tile for cycle tracking shows a neutral label
             you can rename (default &ldquo;Daily Log&rdquo;) and never shows
@@ -245,7 +260,10 @@ export default function PrivacyPage() {
             never sent to Plectara&apos;s cloud service or OpenAI unless you
             turn on Include Alcohol in AI Insights (Preferences → AI Insights),
             which is off by default. The Home Screen widget and watch apps
-            never show alcohol.
+            never show alcohol. If you add water or caffeine to Quick Capture
+            (during setup or in Preferences → Quick Capture), the widget and
+            watch apps show only the beverage name, and a tap logs your
+            default serving.
           </p>
         </section>
 
@@ -260,8 +278,8 @@ export default function PrivacyPage() {
             your encrypted diary on this device and included when you export
             your data. The patterns Plectara finds in them, and the names of
             these goals, are worked out on this device and are never sent to
-            Plectara&apos;s cloud service or OpenAI, even when AI explanation
-            or chat is on. Plectara does not diagnose mood or mental health
+            Plectara&apos;s cloud service or OpenAI, even when AI explanations,
+            plans, or chat are on. Plectara does not diagnose mood or mental health
             conditions. If your ratings stay very low for Mood or very high for
             Stress, Insights may suggest reaching out to someone you trust or a
             clinician; that suggestion is shown only on this device.
@@ -355,7 +373,7 @@ export default function PrivacyPage() {
           </h2>
           <p className="mt-3">
             We use processors only to run Plectara: Auth0 for sign-in; Google
-            Cloud to host the API; OpenAI for optional AI explanations and chat
+            Cloud to host the API; OpenAI for optional AI explanations, plans, and chat
             after you allow it; Apple and Google for Health platforms and Sign
             In; and Firebase for optional analytics, distribution, or abuse
             checks that do not include diary contents. They are not given your
@@ -384,7 +402,7 @@ export default function PrivacyPage() {
               messages, for about 30 days.
             </li>
             <li>
-              If you allow AI explanation or chat, OpenAI may keep the findings
+              If you allow AI explanations, plans, or chat, OpenAI may keep the findings
               and messages it receives for up to 30 days for abuse monitoring
               under its API data policy, then deletes them.
             </li>
@@ -406,7 +424,7 @@ export default function PrivacyPage() {
             <strong>Export:</strong> Export My Data (Preferences → Account)
             creates one JSON file with your diary entries, profile (including
             changes you compare), medications (including start dates), saved
-            meals and activities, habits, AI chat, consents, and settings,
+            meals and activities, habits, plans, AI chat, consents, and settings,
             and opens your device&apos;s share sheet so you can save or send it.
             Meal photos are not included. The file is not encrypted, so anyone
             you share it with can read it. Plectara removes its temporary copy
@@ -416,7 +434,7 @@ export default function PrivacyPage() {
             <strong>Delete:</strong> Delete Account (Preferences → Account)
             deletes the Auth0 sign-in account and removes diary data, meal
             photos, the Home Screen widget snapshot, health-import connection,
-            on-device AI artifacts, and reminder schedules on this device. It
+            plans, on-device AI artifacts, and reminder schedules on this device. It
             does not delete files you already exported. The same email can be
             used to create a new account. If deletion cannot reach Auth0, the
             app does not say the account was deleted. Without the app, follow
